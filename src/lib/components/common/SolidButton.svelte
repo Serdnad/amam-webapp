@@ -1,0 +1,34 @@
+<script lang="ts">
+	export let invertColors = false;
+</script>
+
+<button on:click class={invertColors ? 'inverted' : ''}><slot /></button>
+
+<style lang="scss">
+	button {
+		cursor: pointer;
+		transition: all 0.25s;
+
+		border: none;
+		border-radius: 10px;
+
+		padding: 12px 24px;
+		background: #1a8af0;
+		color: white;
+		font-weight: 600;
+		box-shadow: 0 0px 2px 0.5px #11111133;
+
+		&:hover {
+			background: #1771c5;
+		}
+
+		&.inverted {
+			background: white;
+			color: #1a8af0;
+
+			&:hover {
+				background: white;
+			}
+		}
+	}
+</style>
