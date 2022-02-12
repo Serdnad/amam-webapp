@@ -27,7 +27,7 @@
 			color: #1a8af0;
 
 			&:hover {
-				background: white;
+				background: #dadbdb;
 			}
 		}
 	}

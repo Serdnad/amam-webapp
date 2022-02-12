@@ -65,11 +65,10 @@
 
 	.coin-grid {
 		display: grid;
-		grid-template-rows: repeat(2, 1fr);
-		grid-template-columns: repeat(2, 1fr);
+		grid-auto-flow: row dense;
+		grid-template-columns: repeat(auto-fit, minmax(216px, 1fr)); // repeat(3, max(240px, 1fr));
 
-		row-gap: 16px;
-		column-gap: 16px;
+		gap: 16px;
 	}
 
 	.coin-card {

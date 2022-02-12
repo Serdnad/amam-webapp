@@ -24,7 +24,7 @@
 
 	:global(body) {
 		margin: 0;
-		background: #2c2a3a;
+		background: #292638;
 	}
 
 	.rtl {

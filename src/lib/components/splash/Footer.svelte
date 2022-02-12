@@ -40,7 +40,7 @@
 	}
 
 	.container {
-		max-width: 960px;
+		max-width: 1024px;
 		margin: auto;
 
 		display: flex;

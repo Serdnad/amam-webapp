@@ -26,7 +26,7 @@
 
 	<div class="expanded" />
 
-	<SolidButton on:click={toggleLanguage}>Lang ةغللا</SolidButton>
+	<SolidButton on:click={toggleLanguage}>Lang اللغة</SolidButton>
 </header>
 
 <style lang="scss">
@@ -34,7 +34,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
+	} 
 
 	.expanded {
 		flex: 1;

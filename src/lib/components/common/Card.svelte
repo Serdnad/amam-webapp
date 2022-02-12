@@ -9,7 +9,7 @@
 <style lang="scss">
 	div {
 		padding: 32px;
-		background: #374250;
+		background: #384250;
 
 		border-radius: 20px;
 

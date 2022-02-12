@@ -13,8 +13,8 @@
 	<Header />
 
 	<Card>
-		<div class="courses-card row">
-			<div>
+		<div class="welcome-card row">
+			<div class="text">
 				<h1>{t('heading1', $lang)}</h1>
 				<h3 class="gray">{t('sub-heading1', $lang)}</h3>
 
@@ -25,13 +25,11 @@
 				</div>
 			</div>
 
-			<Spacer width="32px" height="32px" />
-
-			<img src="/images/learn.png" width="30%" height="100%" />
+			<img src="/images/learn.png" width="30%" height="100%" alt="" />
 		</div>
 	</Card>
 
-	<Spacer height="16px" />
+	<Spacer height="24px" />
 
 	<div class="card-grid">
 		<div class="coins-card">
@@ -44,8 +42,8 @@
 					<div class="expanded">
 						<h3>{t('heading (free courses)', $lang)}</h3>
 						<Spacer height="32px" />
-						<p class="gray">{t('sub-heading (free courses)', $lang)}</p>
-						<p class="gray">{t('sub-heading 2 (free courses)', $lang)}</p>
+						<h4 class="gray">{t('sub-heading (free courses)', $lang)}</h4>
+						<h4 class="gray">{t('sub-heading 2 (free courses)', $lang)}</h4>
 					</div>
 
 					<div class="col expanded centered">
@@ -72,14 +70,16 @@
 		</div>
 	</div>
 
-	<Spacer height="16px" />
+	<Spacer height="24px" />
 
 	<Card>
-		<div class="row">
-			<div class="expanded">
+		<div class="countries-card row">
+			<div class="text expanded">
 				<h2>{t('Forward heading', $lang)}</h2>
 				<h3 class="gray">{t('Forward sub-heading', $lang)}</h3>
 			</div>
+
+			<Spacer width="16px" height="16px" />
 
 			<div class="country-grid expanded">
 				{#each ['Jordan', 'Saudi Arabia', 'Syria', 'Lebanon', 'Egypt', 'Tunisia'] as country}
@@ -92,23 +92,21 @@
 		</div>
 	</Card>
 
-	<Spacer width="16px" height="16px" />
+	<Spacer width="16px" height="24px" />
 
 	<Card>
-		<div class="row">
-			<img src="/images/laptop.png" />
-
-			<Spacer width="32px" height="32px" />
+		<div class="laptop-card">
+			<img src="/images/laptop.png" alt="preview" />
 
 			<div>
 				<h2>{t('heading - last section', $lang)}</h2>
 				<h3 class="gray">{t('sub-heading - last section', $lang)}</h3>
+			</div>
 
-				<div class="row">
-					<SolidButton invertColors={true}>{t('last section first button', $lang)}</SolidButton>
-					<Spacer height="16px" width="16px" />
-					<SolidButton>{t('last section second button', $lang)}</SolidButton>
-				</div>
+			<div class="row">
+				<SolidButton invertColors={true}>{t('last section first button', $lang)}</SolidButton>
+				<Spacer height="16px" width="16px" />
+				<SolidButton>{t('last section second button', $lang)}</SolidButton>
 			</div>
 		</div>
 	</Card>
@@ -120,13 +118,14 @@
 	main {
 		margin: auto;
 		padding: 16px;
-		max-width: 960px;
-		min-height: 100vh;
+		max-width: 1024px;
+		min-height: calc(100vh - 134px);
 	}
 
 	.row {
 		display: flex;
 		align-items: center;
+		// flex-wrap: wrap;
 	}
 
 	.col {
@@ -147,24 +146,37 @@
 		color: #aaaaaa;
 	}
 
+	.welcome-card {
+		display: flex;
+		flex-flow: row wrap-reverse;
+		justify-content: space-between;
+		gap: 16px;
+
+		.text {
+			max-width: max(400px, 55%);
+		}
+
+		img {
+			// width: 40%;
+			width: min(360px, 100%);
+		}
+	}
+
 	.card-grid {
 		display: grid;
 		align-content: stretch;
 
-		row-gap: 16px;
-		column-gap: 16px;
+		grid-auto-flow: dense;
+		grid-template-columns: repeat(auto-fit, minmax(max(320px, calc(50% - 64px)), 1fr));
+		gap: 24px;
 
 		.coins-card {
-			grid-row-start: 1;
 			grid-row-end: span 2;
-			grid-column-start: 1;
-			grid-column-end: span 1;
 
 			height: 100%;
 		}
 
 		.learn-card {
-			grid-column-start: 2;
 			grid-column-end: span 1;
 
 			h3 {
@@ -172,55 +184,86 @@
 			}
 
 			p {
-				line-height: 1.4;
+				line-height: 1.8;
 				margin: 0;
 				margin-top: 4px;
 			}
 
 			img {
 				width: 100%;
+				// min-width: 200px;
+
 				margin-top: -32px;
-				margin-right: -64px;
+				margin-inline-end: -64px;
 			}
+
+			// .expanded {
+			// 	flex-wrap: wrap;
+			// }
 		}
 
 		.invite-card {
-			grid-row-start: 2;
-			grid-column-start: 2;
 			grid-column-end: span 1;
 
 			img {
-				margin: -32px 16px -32px -32px;
 				max-width: 60%;
+
+				margin: -32px;
+				margin-inline-end: 16px;
 			}
 		}
 	}
 
-	.country-grid {
-		display: grid;
-		grid-template-rows: repeat(3, 1fr);
-		grid-template-columns: repeat(2, 1fr);
-		column-gap: 16px;
-		row-gap: 16px;
+	.countries-card {
+		flex-wrap: wrap;
 
-		.country-card {
-			display: flex;
-			align-items: center;
-			padding: 8px 16px;
+		.country-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			gap: 16px;
 
-			background: #eaeaea;
-			border-radius: 8px;
+			.country-card {
+				display: flex;
+				align-items: center;
+				padding: 8px 16px;
+
+				background: #eaeaea;
+				border-radius: 8px;
+			}
+
+			img {
+				width: 32px;
+				height: 32px;
+			}
+
+			p {
+				margin: 0 16px;
+				color: black;
+				font-weight: 600;
+			}
 		}
+	}
+
+	.laptop-card {
+		display: grid;
+
+		grid-template-columns: repeat(auto-fit, minmax(max(200px, calc(50% - 64px)), 1fr));
+		gap: 16px;
 
 		img {
-			width: 32px;
-			height: 32px;
+			max-width: 100%;
+			grid-row-end: span 2;
 		}
+	}
 
-		p {
-			margin: 0 16px;
-			color: black;
-			font-weight: 600;
-		}
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	button {
+		line-height: 1.6;
 	}
 </style>
