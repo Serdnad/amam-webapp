@@ -18,12 +18,12 @@
 			<div class="row spaced">
 				<img src="/icons/amam.png" />
 				<Spacer width="16px" />
-				<h2>{t('amam', $lang)}</h2>
+				<h2>{t('common.amam', $lang)}</h2>
 			</div>
 
-			<a href="/">{t('Market', $lang)}</a>
-			<a href="/">{t('Learn', $lang)}</a>
-			<a href="/">{t('Company', $lang)}</a>
+			<a href="/" class="desktop-only">{t('nav.Market', $lang)}</a>
+			<a href="/" class="desktop-only">{t('nav.Learn', $lang)}</a>
+			<a href="/" class="desktop-only">{t('nav.Company', $lang)}</a>
 		</div>
 
 		<div class="expanded" />

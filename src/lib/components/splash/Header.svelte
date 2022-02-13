@@ -4,6 +4,7 @@
 	import { setPreference } from '$lib/utils/preferences';
 	import SolidButton from '../common/SolidButton.svelte';
 	import Spacer from '../common/Spacer.svelte';
+	import NavDrawerButton from '../layout/NavDrawerButton.svelte';
 
 	function toggleLanguage() {
 		$lang = $lang == 'en' ? 'ar' : 'en';
@@ -13,15 +14,19 @@
 
 <header>
 	<div class="row expanded2 links">
+		<div class="mobile-only">
+			<NavDrawerButton />
+		</div>
+
 		<div class="row spaced">
 			<img src="/icons/amam.png" />
 			<Spacer width="16px" />
-			<h2>{t('amam', $lang)}</h2>
+			<h2>{t('common.amam', $lang)}</h2>
 		</div>
 
-		<a href="/">{t('Market', $lang)}</a>
-		<a href="/">{t('Learn', $lang)}</a>
-		<a href="/">{t('Company', $lang)}</a>
+		<a href="/" class="desktop-only">{t('nav.Market', $lang)}</a>
+		<a href="/" class="desktop-only">{t('nav.Learn', $lang)}</a>
+		<a href="/" class="desktop-only">{t('nav.Company', $lang)}</a>
 	</div>
 
 	<div class="expanded" />
@@ -34,7 +39,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	} 
+	}
 
 	.expanded {
 		flex: 1;

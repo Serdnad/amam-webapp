@@ -85,7 +85,7 @@
 				{#each ['Jordan', 'Saudi Arabia', 'Syria', 'Lebanon', 'Egypt', 'Tunisia'] as country}
 					<div class="country-card">
 						<img src="/icons/countries/{country.toLowerCase().replace(' ', '_')}.png" alt="" />
-						<p>{t(country.toLowerCase(), $lang)}</p>
+						<p>{t('common.countries.' + country.toLowerCase(), $lang)}</p>
 					</div>
 				{/each}
 			</div>
