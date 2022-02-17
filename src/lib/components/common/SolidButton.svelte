@@ -12,10 +12,11 @@
 		border: none;
 		border-radius: 10px;
 
-		padding: 12px 24px;
+		padding: 12px 32px;
 		background: #1a8af0;
 		color: white;
-		font-weight: 600;
+		font-size: 14px;
+		font-weight: 700;
 		box-shadow: 0 0px 2px 0.5px #11111133;
 
 		&:hover {

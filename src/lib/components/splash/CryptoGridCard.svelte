@@ -14,7 +14,7 @@
 				<img src="/icons/coins/btc_circle.png" />
 
 				<h4>{t('bitcoin', $lang)}</h4>
-				<Spacer height="16px" />
+				<Spacer height="32px" />
 				<p>35,000 JOD (-2% / 24hr)</p>
 				<p>Market Cap: 832.5B</p>
 			</div>
@@ -23,7 +23,7 @@
 				<img src="/icons/coins/eth_circle.png" />
 
 				<h4>{t('ethereum', $lang)}</h4>
-				<Spacer height="16px" />
+				<Spacer height="32px" />
 				<p>1.200 JOD (-2% / 24hr)</p>
 				<p>Market Cap: 39.8B</p>
 			</div>
@@ -32,7 +32,7 @@
 				<img src="/icons/coins/ada_circle.png" />
 
 				<h4>{t('cardano', $lang)}</h4>
-				<Spacer height="16px" />
+				<Spacer height="32px" />
 				<p>3,100 JOD (-2% / 24hr)</p>
 				<p>Market Cap: 376.4B</p>
 			</div>
@@ -41,7 +41,7 @@
 				<img src="/icons/coins/sol_circle.png" />
 
 				<h4>{t('solana', $lang)}</h4>
-				<Spacer height="16px" />
+				<Spacer height="32px" />
 				<p>113 JOD (-2% / 24hr)</p>
 				<p>Market Cap: 38.1B</p>
 			</div>
@@ -69,7 +69,7 @@
 		grid-auto-flow: row dense;
 		grid-template-columns: repeat(auto-fit, minmax(216px, 1fr)); // repeat(3, max(240px, 1fr));
 
-		gap: 16px;
+		gap: 24px;
 	}
 
 	.coin-card {

@@ -41,14 +41,13 @@
 				<div class="row">
 					<div>
 						<h3>{t('heading (free courses)', $lang)}</h3>
-						<Spacer height="32px" />
+						<Spacer height="16px" />
 						<h4 class="gray">{t('sub-heading (free courses)', $lang)}</h4>
 						<h4 class="gray">{t('sub-heading 2 (free courses)', $lang)}</h4>
 					</div>
 
 					<div class="col right centered">
 						<img src="/images/office.png" />
-						<SolidButton>{t('Learn and earn', $lang)}</SolidButton>
 					</div>
 				</div>
 			</Card>
@@ -118,7 +117,7 @@
 	main {
 		margin: auto;
 		padding: 16px;
-		max-width: 1200px;
+		max-width: 1080px;
 		min-height: calc(100vh - 134px);
 	}
 

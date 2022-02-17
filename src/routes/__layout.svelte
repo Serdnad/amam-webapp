@@ -22,7 +22,7 @@
 <style lang="scss">
 	:global(*) {
 		color: white;
-		font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+		font-family: Cereal, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
 	}
 
 	:global(body) {
