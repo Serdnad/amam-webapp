@@ -39,15 +39,15 @@
 		<div class="learn-card">
 			<Card>
 				<div class="row">
-					<div class="expanded">
+					<div>
 						<h3>{t('heading (free courses)', $lang)}</h3>
 						<Spacer height="32px" />
 						<h4 class="gray">{t('sub-heading (free courses)', $lang)}</h4>
 						<h4 class="gray">{t('sub-heading 2 (free courses)', $lang)}</h4>
 					</div>
 
-					<div class="col expanded centered">
-						<img src="/images/office.png" height="50%" />
+					<div class="col right centered">
+						<img src="/images/office.png" />
 						<SolidButton>{t('Learn and earn', $lang)}</SolidButton>
 					</div>
 				</div>
@@ -118,7 +118,7 @@
 	main {
 		margin: auto;
 		padding: 16px;
-		max-width: 1024px;
+		max-width: 1200px;
 		min-height: calc(100vh - 134px);
 	}
 
@@ -179,18 +179,23 @@
 		.learn-card {
 			grid-column-end: span 1;
 
+			.right {
+				width: 60%;
+			}
+
 			h3 {
 				margin: 0;
 			}
 
-			p {
+			h4 {
 				line-height: 1.8;
 				margin: 0;
-				margin-top: 4px;
+				margin-top: 8px;
 			}
 
 			img {
 				width: 100%;
+				// height: 40%;
 				// min-width: 200px;
 
 				margin-top: -32px;

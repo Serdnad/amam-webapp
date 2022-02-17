@@ -51,6 +51,7 @@
 
 		<div class="row">
 			<SolidButton>Get started investing</SolidButton>
+			<Spacer width="16px" />
 			<SolidButton invertColors={true}>Learn how to invest</SolidButton>
 		</div>
 	</div>
@@ -78,10 +79,12 @@
 		padding: 16px;
 		border-radius: 10px;
 
+		max-height: 200px;
+
 		img {
 			position: absolute;
-			width: 48px;
-			height: 48px;
+			width: 72px;
+			height: 72px;
 
 			top: 16px;
 			right: 16px;
@@ -105,6 +108,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		flex-wrap: row wrap;
 	}
 
 	.expanded {

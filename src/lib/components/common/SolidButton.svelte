@@ -30,5 +30,9 @@
 				background: #dadbdb;
 			}
 		}
+
+		// @media screen and (max-width: 560px) {
+		// 	min-width: 220px;
+		// }
 	}
 </style>
