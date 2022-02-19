@@ -10,14 +10,15 @@
 		transition: all 0.25s;
 
 		border: none;
-		border-radius: 10px;
+		border-radius: 12px;
 
-		padding: 12px 32px;
+		padding: 16px 32px;
 		background: #1a8af0;
-		color: white;
-		font-size: 14px;
-		font-weight: 700;
 		box-shadow: 0 0px 2px 0.5px #11111133;
+
+		color: white;
+		font-size: 18px;
+		font-weight: 700;
 
 		&:hover {
 			background: #1771c5;
@@ -35,5 +36,9 @@
 		// @media screen and (max-width: 560px) {
 		// 	min-width: 220px;
 		// }
+	}
+
+	:global(.expanded-button) {
+		width: 100%;
 	}
 </style>

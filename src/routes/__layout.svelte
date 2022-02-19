@@ -1,5 +1,7 @@
 <script lang="ts">
 	import NavDrawer from '$lib/components/layout/NavDrawer.svelte';
+	import Footer from '$lib/components/splash/Footer.svelte';
+	import Header from '$lib/components/splash/Header.svelte';
 
 	import { lang } from '$lib/stores/lang';
 	import { getPreference } from '$lib/utils/preferences';
@@ -16,7 +18,12 @@
 
 <div class={$lang == 'ar' && 'rtl'}>
 	<NavDrawer />
-	<slot />
+
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
 </div>
 
 <style lang="scss">
@@ -48,7 +55,36 @@
 		align-items: center;
 	}
 
+	:global(.col) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	:global(.wrap) {
+		flex-wrap: wrap;
+	}
+
 	.rtl {
 		direction: rtl;
+	}
+
+	main {
+		max-width: 1440px;
+		margin: auto;
+
+		min-height: calc(100vh - 102px - 320px);
+	}
+
+	:global(h1) {
+		font-size: 52px;
+	}
+
+	:global(h2) {
+		font-size: 28px;
+		line-height: 2;
+	}
+
+	:global(h3) {
+		line-height: 2;
 	}
 </style>
