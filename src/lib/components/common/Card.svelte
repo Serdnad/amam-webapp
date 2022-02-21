@@ -13,6 +13,9 @@
 
 		border-radius: 20px;
 
+		display: flex;
+		flex-direction: column;
+
 		&.expand {
 			height: calc(100% - 64px);
 			width: calc(100% - 64px);

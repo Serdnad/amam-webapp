@@ -8,7 +8,7 @@
 
 <footer>
 	<div class="content">
-		<div class="row links">
+		<div class="g">
 			<a href="/">
 				<div class="row spaced">
 					<img src="/icons/amam.png" />
@@ -16,18 +16,15 @@
 					<h2>{t('common.amam', $lang)}</h2>
 				</div>
 			</a>
+			<a href="/market" class="header">{t('nav.Market', $lang)}</a>
+			<a href="/learn" class="header">{t('nav.Learn', $lang)}</a>
+			<a href="/company" class="header">{t('nav.Company', $lang)}</a>
+			<a href="/help" class="header">Help</a>
+			<a href="/terms" class="header">Terms</a>
 
-			<a href="/market" class="desktop-only">{t('nav.Market', $lang)}</a>
-			<a href="/learn" class="desktop-only">{t('nav.Learn', $lang)}</a>
-			<a href="/company" class="desktop-only">{t('nav.Company', $lang)}</a>
-			<a href="/help" class="desktop-only">Help</a>
-			<a href="/terms" class="desktop-only">Terms</a>
-		</div>
-
-		<div class="bottom">
-			<p>
-				Amam W.L.L is a company licensed by The Central Bank of Bahrain by The Central Bank of
-				Bahrain. Our headquarters lie in Manama, Bahrain’s capital.
+			<p class="license-text">
+				Amam W.L.L is a company licensed by The Central Bank of Bahrain. Our headquarters lie in
+				Manama, Bahrain’s capital.
 			</p>
 
 			<ul>
@@ -63,10 +60,27 @@
 	footer {
 		background: #384250;
 		margin-top: 32px;
+		padding: 0 32px;
+		padding-top: 24px;
 	}
 
-	.links {
-		justify-content: space-between;
+	.content {
+		max-width: 1280px;
+		margin: auto;
+
+		padding: 32px;
+		padding-top: 0;
+		box-sizing: border-box;
+	}
+
+	.g {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 16px;
+
+		h2 {
+			margin: 0;
+		}
 
 		img {
 			height: 24px;
@@ -74,26 +88,37 @@
 
 		a {
 			text-decoration: none;
-			font-weight: 500;
-			font-size: medium;
+			align-self: center;
+			color: #cccccc;
+
+			&.header {
+				font-size: 24px;
+				color: white;
+			}
 		}
-	}
 
-	.content {
-		max-width: 1440px;
-		margin: auto;
+		.license-text {
+			grid-column-end: span 3;
+			padding-right: 32px;
 
-		padding: 32px;
-		padding-top: 0;
+			line-height: 2.5;
+			color: #cccccc;
+		}
+
+		ul {
+			list-style: none;
+			line-height: 2.5;
+			padding: 0;
+			margin: 0;
+		}
+
+		p {
+			margin: 0;
+		}
 	}
 
 	.bottom {
 		display: grid;
 		grid-template-columns: 40% 20% 20%;
-
-		ul {
-			list-style: none;
-			line-height: 2;
-		}
 	}
 </style>

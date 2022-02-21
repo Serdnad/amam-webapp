@@ -62,7 +62,32 @@ const translations = {
 			}
 		}
 	},
+	market: {},
+	learn: {},
+	company: {
+		company: {
+			en: 'Company',
+			ar: 'TODO'
+		},
+		foundation_card: {
+			title: {
+				en: "We're building the foundation of tomorrow's world",
+				ar: 'TODO'
+			},
+			body: {
+				en: 'The Middle East has been alienated for too long from the cryptocurrency world due to a multiplicity of reasons (such as lack of knowledge, reliance on cash and a lack of opportunity). As such, our journey started in 2022, to solve the previously mentioned issues and building the foundation for tomorrow’s world.',
+				ar: 'TODO'
+			},
+			tagline: {
+				en: 'Amam is tailored to open the doors of opportunities.',
+				ar: 'TODO'
+			}
+		}
+		// TODO
+	},
+	help: {},
 
+	// == OLD ==
 	'sign in': {
 		en: 'Sign in',
 		ar: 'تسجيل الدخول'

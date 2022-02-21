@@ -12,12 +12,12 @@
 		border: none;
 		border-radius: 12px;
 
-		padding: 16px 32px;
+		padding: 12px 32px;
 		background: #1a8af0;
 		box-shadow: 0 0px 2px 0.5px #11111133;
 
 		color: white;
-		font-size: 18px;
+		font-size: 22px;
 		font-weight: 700;
 
 		&:hover {
@@ -39,6 +39,7 @@
 	}
 
 	:global(.expanded-button) {
-		width: 100%;
+		// min-width: 180px;
+		width: min(100%, 280px);
 	}
 </style>

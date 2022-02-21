@@ -29,7 +29,7 @@
 <style lang="scss">
 	:global(*) {
 		color: white;
-		font-family: Cereal, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+		font-family: Changa, Cereal, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
 	}
 
 	:global(body) {
@@ -69,22 +69,26 @@
 	}
 
 	main {
-		max-width: 1440px;
+		max-width: 1280px;
 		margin: auto;
 
 		min-height: calc(100vh - 102px - 320px);
 	}
 
 	:global(h1) {
-		font-size: 52px;
+		font-size: 60px;
 	}
 
 	:global(h2) {
-		font-size: 28px;
+		font-size: 32px;
 		line-height: 2;
 	}
 
 	:global(h3) {
 		line-height: 2;
+	}
+
+	:global(.gray) {
+		color: #cccccc;
 	}
 </style>

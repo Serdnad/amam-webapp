@@ -39,13 +39,15 @@
 
 <style lang="scss">
 	header {
-		max-width: 1440px;
+		max-width: 1280px;
 		margin: auto;
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		padding: 0 32px;
+		box-sizing: border-box;
 
 		@media screen and (max-width: 480px) {
 			padding: 0 16px;
@@ -76,6 +78,6 @@
 	a {
 		text-decoration: none;
 		font-weight: 500;
-		font-size: medium;
+		font-size: 24px;
 	}
 </style>
