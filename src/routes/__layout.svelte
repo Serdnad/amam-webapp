@@ -69,19 +69,21 @@
 	}
 
 	main {
-		max-width: 1280px;
+		max-width: 1248px;
 		margin: auto;
 
 		min-height: calc(100vh - 102px - 320px);
 	}
 
 	:global(h1) {
-		font-size: 60px;
+		font-size: 56px;
+		margin-top: 0;
 	}
 
 	:global(h2) {
-		font-size: 32px;
+		font-size: 30px;
 		line-height: 2;
+		margin-top: 0;
 	}
 
 	:global(h3) {
@@ -90,5 +92,9 @@
 
 	:global(.gray) {
 		color: #cccccc;
+	}
+
+	:global(.dense) {
+		margin: 0;
 	}
 </style>

@@ -19,9 +19,9 @@
 		</div>
 
 		<ul>
-			<li><a href="/">{t('nav.Market', $lang)}</a></li>
-			<li><a href="/">{t('nav.Learn', $lang)}</a></li>
-			<li><a href="/">{t('nav.Company', $lang)}</a></li>
+			<li><a href="/market" target="_self">{t('nav.Market', $lang)}</a></li>
+			<li><a href="/learn" target="_self">{t('nav.Learn', $lang)}</a></li>
+			<li><a href="/company" target="_self">{t('nav.Company', $lang)}</a></li>
 		</ul>
 	</div>
 </div>

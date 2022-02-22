@@ -9,23 +9,32 @@
 <footer>
 	<div class="content">
 		<div class="g">
-			<a href="/">
+			<a href="/" target="_self">
 				<div class="row spaced">
 					<img src="/icons/amam.png" />
 					<Spacer width="16px" />
 					<h2>{t('common.amam', $lang)}</h2>
 				</div>
 			</a>
-			<a href="/market" class="header">{t('nav.Market', $lang)}</a>
-			<a href="/learn" class="header">{t('nav.Learn', $lang)}</a>
-			<a href="/company" class="header">{t('nav.Company', $lang)}</a>
-			<a href="/help" class="header">Help</a>
-			<a href="/terms" class="header">Terms</a>
+			<a href="/market" target="_self" class="header">{t('nav.Market', $lang)}</a>
+			<a href="/learn" target="_self" class="header">{t('nav.Learn', $lang)}</a>
+			<a href="/company" target="_self" class="header">{t('nav.Company', $lang)}</a>
+			<a href="/help" target="_self" class="header">Help</a>
+			<a href="/terms" target="_self" class="header">Terms</a>
 
-			<p class="license-text">
-				Amam W.L.L is a company licensed by The Central Bank of Bahrain. Our headquarters lie in
-				Manama, Bahrain’s capital.
-			</p>
+			<div class="left-section">
+				<p class="license-text">
+					Amam W.L.L is a company licensed by The Central Bank of Bahrain. Our headquarters lie in
+					Manama, Bahrain’s capital.
+				</p>
+
+				<h5>Amam W.L.L 2022 All Rights Reserved</h5>
+				<div class="socials">
+					<a href="https:/twitter.com"><img src="/icons/twitter.png" /></a>
+					<a href="https:/twitter.com"><img style="padding: 3px;" src="/icons/facebook.png" /></a>
+					<a href="https:/twitter.com"><img src="/icons/instagram.png" /></a>
+				</div>
+			</div>
 
 			<ul>
 				<li><a>About us</a></li>
@@ -48,11 +57,6 @@
 				<li><a>Sharia Compliance</a></li>
 			</ul>
 		</div>
-
-		<div>
-			<h5>Amam W.L.L 2022 All Rights Reserved</h5>
-			<div>T F I</div>
-		</div>
 	</div>
 </footer>
 
@@ -65,7 +69,7 @@
 	}
 
 	.content {
-		max-width: 1280px;
+		max-width: 1248px;
 		margin: auto;
 
 		padding: 32px;
@@ -97,11 +101,14 @@
 			}
 		}
 
-		.license-text {
+		.left-section {
 			grid-column-end: span 3;
 			padding-right: 32px;
+		}
 
-			line-height: 2.5;
+		.license-text {
+			font-size: 20px;
+			line-height: 1.8;
 			color: #cccccc;
 		}
 
@@ -114,6 +121,16 @@
 
 		p {
 			margin: 0;
+		}
+	}
+
+	.socials {
+		display: flex;
+		gap: 32px;
+		img {
+			// width: 36px;
+			transform: scale(1.5);
+			box-sizing: border-box;
 		}
 	}
 

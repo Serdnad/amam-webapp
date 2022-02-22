@@ -12,7 +12,7 @@
 		border: none;
 		border-radius: 12px;
 
-		padding: 12px 32px;
+		padding: 10px 28px;
 		background: #1a8af0;
 		box-shadow: 0 0px 2px 0.5px #11111133;
 

@@ -124,10 +124,19 @@
 
 	<div class="grid-row">
 		<Card>
-			<h1>Forward... into the future</h1>
+			<h1 class="dense">Forward... into the future</h1>
 			<h2 class="gray">Tailored for the Middle East to build a better world for everyone</h2>
 
-			COUNTRY GRID
+			<div class="country-grid">
+				{#each new Array(7) as _}
+					<div class="country-card">
+						<img src="/icons/countries/lebanon.png" alt="" />
+						<p>{t('common.countries.lebanon', $lang)}</p>
+					</div>
+				{/each}
+
+				<SolidButton>Explore Regions</SolidButton>
+			</div>
 		</Card>
 	</div>
 
@@ -159,6 +168,11 @@
 
 		grid-template-columns: repeat(12, 1fr);
 		align-items: stretch;
+
+		// TODO
+		// @media screen and (max-width: 480px) {
+		// 	grid-template-columns: repeat(4, 1fr);
+		// }
 	}
 
 	.grid-row {
@@ -210,15 +224,6 @@
 		}
 	}
 
-	h1 {
-		margin-top: 0;
-	}
-
-	h2 {
-		margin-top: 0;
-	}
-	// }
-
 	.coin-row {
 		display: flex;
 		gap: 32px;
@@ -254,6 +259,33 @@
 				margin-bottom: 0;
 
 				font-size: 18px;
+			}
+		}
+	}
+
+	.country-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(200px, 1fr));
+		gap: 32px;
+
+		.country-card {
+			display: flex;
+			align-items: center;
+			padding: 12px 16px;
+
+			background: #eaeaea;
+			border-radius: 12px;
+
+			img {
+				width: 48px;
+				height: 48px;
+			}
+
+			p {
+				font-size: 26px;
+				margin: 0 16px;
+				color: black;
+				font-weight: 600;
 			}
 		}
 	}

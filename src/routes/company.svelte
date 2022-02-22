@@ -18,10 +18,10 @@
 			</Card>
 		</div>
 
-		<div class="grid-row">
+		<div class="foundation-card grid-row">
 			<Card>
 				<h1>We're building the foundation of tomorrow's world</h1>
-				<h3>
+				<h3 class="gray">
 					The Middle East has been alienated for too long from the cryptocurrency world due to a
 					multiplicity of reasons (such as lack of knowledge, reliance on cash and a lack of
 					opportunity). As such, our journey started in 2022, to solve the previously mentioned
@@ -49,27 +49,27 @@
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Zaid Abdul-Hadi</h2>
-							<h4>Co-Founder, President & Chief Executive Officer</h4>
+							<h4 class="gray">Co-Founder, President & Chief Executive Officer</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Andres Gutierrez</h2>
-							<h4>Co-Founder & Chief Technology Officer</h4>
+							<h4 class="gray">Co-Founder & Chief Technology Officer</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Sharif Atassi</h2>
-							<h4>Vice President</h4>
+							<h4 class="gray">Vice President</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Hareth Hmoud</h2>
-							<h4>Chief Operations Officer</h4>
+							<h4 class="gray">Chief Operations Officer</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Muhieddeen Al-Jawhary</h2>
-							<h4>Chief of Marketing and Education</h4>
+							<h4 class="gray">Chief of Marketing and Education</h4>
 						</div>
 					</grid>
 				</div>
@@ -96,6 +96,7 @@
 	.grid {
 		display: grid;
 		gap: 32px;
+		align-items: baseline;
 
 		grid-template-columns: repeat(12, 1fr);
 	}
@@ -119,6 +120,12 @@
 	.team-image {
 		width: 60%;
 		margin: -32px 0;
+	}
+
+	.foundation-card {
+		h1 {
+			margin: 0;
+		}
 	}
 
 	.country-grid {
@@ -150,30 +157,38 @@
 	.team-grid {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
+		gap: 32px;
 
 		.teammate {
 			grid-column-end: span 4;
 			display: flex;
 			flex-direction: column;
+			align-items: center;
 			// align-items: center;
 
 			.circle {
-				max-width: 280px;
+				min-width: 240px;
+				max-width: 320px;
+
+				min-height: 240px;
 				max-height: 280px;
 				aspect-ratio: 1;
 
-				background: blue;
+				background: #1a8af0;
 				border-radius: 50%;
 			}
 
-			// h2,
-			// h4 {
-			// 	text-align: center;
-			// }
+			h2 {
+				margin-top: 16px;
+				margin-bottom: 0;
+			}
 
 			h4 {
 				font-size: 24px;
 				font-weight: 400;
+				text-align: center;
+
+				margin: 0;
 			}
 		}
 	}

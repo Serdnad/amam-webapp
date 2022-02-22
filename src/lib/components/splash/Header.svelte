@@ -18,18 +18,18 @@
 			<NavDrawerButton />
 		</div>
 
-		<a href="/">
-			<div class="row spaced">
+		<a href="/" target="_self">
+			<div class="row">
 				<img src="/icons/amam.png" />
 				<Spacer width="16px" />
 				<h2>{t('common.amam', $lang)}</h2>
 			</div>
 		</a>
 
-		<a href="/market" class="desktop-only">{t('nav.Market', $lang)}</a>
-		<a href="/learn" class="desktop-only">{t('nav.Learn', $lang)}</a>
-		<a href="/company" class="desktop-only">{t('nav.Company', $lang)}</a>
-		<a href="/help" class="desktop-only">Help</a>
+		<a href="/market" target="_self">{t('nav.Market', $lang)}</a>
+		<a href="/learn" target="_self">{t('nav.Learn', $lang)}</a>
+		<a href="/company" target="_self">{t('nav.Company', $lang)}</a>
+		<a href="/help" target="_self">Help</a>
 	</div>
 
 	<div class="expanded" />
@@ -39,7 +39,7 @@
 
 <style lang="scss">
 	header {
-		max-width: 1280px;
+		max-width: 1248px;
 		margin: auto;
 
 		display: flex;
@@ -51,6 +51,14 @@
 
 		@media screen and (max-width: 480px) {
 			padding: 0 16px;
+		}
+	}
+
+	.row {
+		justify-content: center;
+
+		h2 {
+			margin: 16px 0;
 		}
 	}
 
