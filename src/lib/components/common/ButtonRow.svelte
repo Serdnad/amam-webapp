@@ -7,7 +7,6 @@
 		nodes.forEach((button) => {
 			button.classList.add('expanded-button');
 		});
-		a.map((q) => console.log(q));
 	});
 </script>
 

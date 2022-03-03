@@ -2,7 +2,9 @@
 	import Card from '$lib/components/common/Card.svelte';
 	import Content from '$lib/components/layout/Content.svelte';
 	import { lang } from '$lib/stores/lang';
-	import { t } from '$lib/translations';
+	import { translate } from '$lib/translations';
+
+	$: t = translate($lang);
 </script>
 
 <Content>
@@ -11,7 +13,7 @@
 			<Card>
 				<div class="row">
 					<div class="rotated">
-						<h1>Company</h1>
+						<h1>{t('company.company')}</h1>
 					</div>
 					<img class="team-image" src="/images/team.png" alt="" />
 				</div>
@@ -20,21 +22,18 @@
 
 		<div class="foundation-card grid-row">
 			<Card>
-				<h1>We're building the foundation of tomorrow's world</h1>
+				<h1>{t('company.foundation.title')}</h1>
 				<h3 class="gray">
-					The Middle East has been alienated for too long from the cryptocurrency world due to a
-					multiplicity of reasons (such as lack of knowledge, reliance on cash and a lack of
-					opportunity). As such, our journey started in 2022, to solve the previously mentioned
-					issues and building the foundation for tomorrow’s world.
+					{t('company.foundation.body')}
 				</h3>
 
-				<h2>Amam is tailored to open the doors of opportunities.</h2>
+				<h2>{t('company.foundation.tagline')}</h2>
 
 				<div class="country-grid">
 					{#each ['Jordan', 'Saudi Arabia', 'Syria', 'Lebanon', 'Egypt', 'Tunisia'] as country}
 						<div class="country-card">
 							<img src="/icons/countries/{country.toLowerCase().replace(' ', '_')}.png" alt="" />
-							<p>{t('common.countries.' + country.toLowerCase(), $lang)}</p>
+							<p>{t('common.countries.' + country.toLowerCase())}</p>
 						</div>
 					{/each}
 				</div>
@@ -49,27 +48,27 @@
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Zaid Abdul-Hadi</h2>
-							<h4 class="gray">Co-Founder, President & Chief Executive Officer</h4>
+							<h4 class="gray">{t('company.team.zaid_role')}</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Andres Gutierrez</h2>
-							<h4 class="gray">Co-Founder & Chief Technology Officer</h4>
+							<h4 class="gray">{t('company.team.andres_role')}</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Sharif Atassi</h2>
-							<h4 class="gray">Vice President</h4>
+							<h4 class="gray">{t('company.team.sharif_role')}</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Hareth Hmoud</h2>
-							<h4 class="gray">Chief Operations Officer</h4>
+							<h4 class="gray">{t('company.team.hareth_role')}</h4>
 						</div>
 						<div class="teammate">
 							<div class="circle" />
 							<h2>Muhieddeen Al-Jawhary</h2>
-							<h4 class="gray">Chief of Marketing and Education</h4>
+							<h4 class="gray">{t('company.team.muhi_role')}</h4>
 						</div>
 					</grid>
 				</div>
@@ -78,14 +77,14 @@
 
 		<div class="grid-one-third">
 			<Card expand>
-				<h1>Blog</h1>
+				<h1>{t('company.blog')}</h1>
 				<h1>COMING SOON</h1>
 			</Card>
 		</div>
 
 		<div class="grid-two-thirds">
 			<Card expand>
-				<h1>Newsroom</h1>
+				<h1>{t('company.newsroom')}</h1>
 				<h1>COMING SOON</h1>
 			</Card>
 		</div>

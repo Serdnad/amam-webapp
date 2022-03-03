@@ -25,7 +25,7 @@
 				<h1 class="dense">Market</h1>
 
 				<div class="coin-grid">
-					{#each new Array(4) as _}
+					{#each new Array(6) as _}
 						<CryptoSummaryCard symbol="btc" />
 					{/each}
 				</div>

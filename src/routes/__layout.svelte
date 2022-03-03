@@ -17,8 +17,6 @@
 </svelte:head>
 
 <div class={$lang == 'ar' && 'rtl'}>
-	<NavDrawer />
-
 	<Header />
 	<main>
 		<slot />

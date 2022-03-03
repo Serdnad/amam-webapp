@@ -4,7 +4,9 @@
 	import SolidButton from '$lib/components/common/SolidButton.svelte';
 	import Spacer from '$lib/components/common/Spacer.svelte';
 	import { lang } from '$lib/stores/lang';
-	import { t } from '$lib/translations';
+	import { translate } from '$lib/translations';
+
+	$: t = translate($lang);
 </script>
 
 <div class="content">
@@ -12,16 +14,14 @@
 		<Card>
 			<div class="welcome-card row">
 				<div class="col">
-					<h1>Our future starts here</h1>
-					<h2 class="gray">
-						The first exchange to offer cash as a payment method to buy and sell crypto
-					</h2>
+					<h1>{t('home.welcome.title')}</h1>
+					<h2 class="gray">{t('home.welcome.body')}</h2>
 
 					<Spacer height="32px" />
 
 					<ButtonRow>
-						<SolidButton invertColors={true}>Enter Email</SolidButton>
-						<SolidButton>Start Investing</SolidButton>
+						<SolidButton invertColors={true}>{t('home.welcome.enter_email')}</SolidButton>
+						<SolidButton>{t('home.welcome.start_investing')}</SolidButton>
 					</ButtonRow>
 				</div>
 
@@ -43,7 +43,7 @@
 				<div class="coin-card">
 					<img src="/icons/coins/btc_circle.png" />
 
-					<h3>{t('bitcoin', $lang)}</h3>
+					<h3>{t('bitcoin')}</h3>
 					<Spacer height="16px" />
 					<p>35,000 JOD (-2% / 24hr)</p>
 					<p>Market Cap: 832.5B</p>
@@ -52,7 +52,7 @@
 				<div class="coin-card">
 					<img src="/icons/coins/eth_circle.png" />
 
-					<h3>{t('ethereum', $lang)}</h3>
+					<h3>{t('ethereum')}</h3>
 					<Spacer height="16px" />
 					<p>1.200 JOD (-2% / 24hr)</p>
 					<p>Market Cap: 39.8B</p>
@@ -61,7 +61,7 @@
 				<div class="coin-card">
 					<img src="/icons/coins/ada_circle.png" />
 
-					<h3>{t('cardano', $lang)}</h3>
+					<h3>{t('cardano')}</h3>
 					<Spacer height="16px" />
 					<p>3,100 JOD (-2% / 24hr)</p>
 					<p>Market Cap: 376.4B</p>
@@ -70,7 +70,7 @@
 				<div class="coin-card">
 					<img src="/icons/coins/sol_circle.png" />
 
-					<h3>{t('solana', $lang)}</h3>
+					<h3>{t('solana')}</h3>
 					<Spacer height="16px" />
 					<p>113 JOD (-2% / 24hr)</p>
 					<p>Market Cap: 38.1B</p>
@@ -83,9 +83,9 @@
 		<Card expand>
 			<div class="row">
 				<div>
-					<h1>Free courses</h1>
-					<h2 class="gray">Online or in person in our offices</h2>
-					<SolidButton>Learn and earn crypto</SolidButton>
+					<h1>{t('home.courses.title')}</h1>
+					<h2 class="gray">{t('home.courses.body')}</h2>
+					<SolidButton>{t('home.courses.button')}</SolidButton>
 				</div>
 
 				<Spacer width="32px" />
@@ -97,14 +97,14 @@
 
 	<div class="grid-one-third-row">
 		<Card expand>
-			<h2>Chance to win 100,000 USD in BTC after sign up</h2>
+			<h2>{t('home.lottery.title')}</h2>
 			<img src="/images/pair.png" alt="" />
 		</Card>
 	</div>
 
 	<div class="grid-two-thirds-row">
 		<Card expand>
-			<h1>Cash, Credit/Debit, Paypal, and More</h1>
+			<h1>{t('home.payment_methods.title')}</h1>
 
 			<ButtonRow>
 				<SolidButton invertColors>Payment Methods</SolidButton>
@@ -113,29 +113,29 @@
 		</Card>
 	</div>
 
-	<div class="raffle-card grid-one-third-row">
+	<div class="grid-one-third-row">
 		<Card expand>
 			<!-- <div style="display: flex; flex-direction: column; justify-content: space-between;"> -->
-			<h2>Find the locations of the cash machines and how to use them</h2>
-			<SolidButton>Cash Machines</SolidButton>
+			<h2>{t('home.cash_machines.title')}</h2>
+			<SolidButton>{t('home.cash_machines.button')}</SolidButton>
 			<!-- </div> -->
 		</Card>
 	</div>
 
 	<div class="grid-row">
 		<Card>
-			<h1 class="dense">Forward... into the future</h1>
-			<h2 class="gray">Tailored for the Middle East to build a better world for everyone</h2>
+			<h1 class="dense">{t('home.forward.title')}</h1>
+			<h2 class="gray">{t('home.forward.body')}</h2>
 
 			<div class="country-grid">
 				{#each new Array(7) as _}
 					<div class="country-card">
 						<img src="/icons/countries/lebanon.png" alt="" />
-						<p>{t('common.countries.lebanon', $lang)}</p>
+						<p>{t('common.countries.lebanon')}</p>
 					</div>
 				{/each}
 
-				<SolidButton>Explore Regions</SolidButton>
+				<SolidButton>{t('home.forward.button')}</SolidButton>
 			</div>
 		</Card>
 	</div>
@@ -144,11 +144,11 @@
 		<Card>
 			<div class="kickstart-card row">
 				<div>
-					<h1>Kickstart your future and plan for tomorrow</h1>
+					<h1>{t('home.kickstart.title')}</h1>
 
 					<ButtonRow>
-						<SolidButton>Begin Investing</SolidButton>
-						<SolidButton>Download App</SolidButton>
+						<SolidButton>{t('home.kickstart.begin_investing')}</SolidButton>
+						<SolidButton>{t('home.kickstart.download_app')}</SolidButton>
 					</ButtonRow>
 				</div>
 
