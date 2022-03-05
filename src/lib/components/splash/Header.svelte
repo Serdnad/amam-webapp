@@ -13,10 +13,8 @@
 </script>
 
 <header>
-	<div class="row expanded2 links">
-		<div class="mobile-only">
-			<NavDrawerButton />
-		</div>
+	<div class="mobile-only">
+		<NavDrawerButton />
 
 		<a href="/" target="_self">
 			<div class="row">
@@ -25,11 +23,23 @@
 				<h2>{t('common.amam', $lang)}</h2>
 			</div>
 		</a>
+	</div>
 
-		<a href="/market" target="_self">{t('nav.Market', $lang)}</a>
-		<a href="/learn" target="_self">{t('nav.Learn', $lang)}</a>
-		<a href="/company" target="_self">{t('nav.Company', $lang)}</a>
-		<a href="/help" target="_self">Help</a>
+	<div class="desktop-only expanded-links">
+		<div class="row expanded2 links">
+			<a href="/" target="_self">
+				<div class="row">
+					<img src="/icons/amam.png" />
+					<Spacer width="16px" />
+					<h2>{t('common.amam', $lang)}</h2>
+				</div>
+			</a>
+
+			<a href="/market" target="_self">{t('nav.Market', $lang)}</a>
+			<a href="/learn" target="_self">{t('nav.Learn', $lang)}</a>
+			<a href="/company" target="_self">{t('nav.Company', $lang)}</a>
+			<a href="/help" target="_self">Help</a>
+		</div>
 	</div>
 
 	<div class="expanded" />
@@ -44,7 +54,6 @@
 
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 
 		padding: 0 32px;
 		box-sizing: border-box;
@@ -52,6 +61,14 @@
 		@media screen and (max-width: 480px) {
 			padding: 0 16px;
 		}
+	}
+
+	.expanded-links {
+		display: flex;
+		flex: 3;
+		// width: 100%;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.row {

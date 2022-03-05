@@ -18,6 +18,7 @@
 
 <div class={$lang == 'ar' && 'rtl'}>
 	<Header />
+	<NavDrawer />
 	<main>
 		<slot />
 	</main>

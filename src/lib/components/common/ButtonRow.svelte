@@ -19,6 +19,7 @@
 <style lang="scss">
 	.button-row {
 		display: flex;
+		flex-flow: row wrap;
 		gap: 32px;
 	}
 </style>

@@ -90,7 +90,7 @@
 
 				<Spacer width="32px" />
 
-				<img src="/images/wireframe.png" alt="" />
+				<img src="/images/wireframe.png" class="desktop-only" alt="" />
 			</div>
 		</Card>
 	</div>
@@ -169,24 +169,33 @@
 		grid-template-columns: repeat(12, 1fr);
 		align-items: stretch;
 
-		// TODO
-		// @media screen and (max-width: 480px) {
-		// 	grid-template-columns: repeat(4, 1fr);
-		// }
+		@media screen and (max-width: 480px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
 	.grid-row {
 		grid-column-end: span 12;
+
+		@media screen and (max-width: 480px) {
+			grid-column-end: span 1;
+		}
 	}
 
 	.grid-one-third-row {
 		grid-column-end: span 4;
-		// align-self: stretch;
+
+		@media screen and (max-width: 480px) {
+			grid-column-end: span 1;
+		}
 	}
 
 	.grid-two-thirds-row {
 		grid-column-end: span 8;
-		// align-self: stretch;
+
+		@media screen and (max-width: 480px) {
+			grid-column-end: span 1;
+		}
 	}
 
 	img {
@@ -226,6 +235,7 @@
 
 	.coin-row {
 		display: flex;
+		flex-flow: row wrap;
 		gap: 32px;
 
 		.coin-card {
@@ -237,6 +247,7 @@
 			border-radius: 10px;
 
 			max-height: 200px;
+			min-width: 240px;
 
 			img {
 				position: absolute;
@@ -265,7 +276,7 @@
 
 	.country-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto, minmax(200px, 1fr));
 		gap: 32px;
 
 		.country-card {
@@ -291,6 +302,12 @@
 	}
 
 	.kickstart-card {
+		display: flex;
+
+		@media screen and (max-width: 560px) {
+			flex-flow: column;
+		}
+
 		img {
 			max-width: max(320px, 40%);
 		}
