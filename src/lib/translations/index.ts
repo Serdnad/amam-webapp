@@ -4,40 +4,36 @@ const translations = {
 			en: 'amam',
 			ar: 'أمام'
 		},
-		Search: {
-			en: 'Search',
-			ar: 'ابحث'
-		},
 		coins: {},
 		countries: {
-			jordan: {
-				en: 'Jordan',
-				ar: 'األردن'
+			'united arab emirates': {
+				en: 'United Arab Emirates',
+				ar: 'الإمارات'
+			},
+			saudi_arabia: {
+				en: 'Saudi Arabia',
+				ar: 'السعودية'
+			},
+			kuwait: {
+				en: 'Kuwait',
+				ar: 'الكويت'
+			},
+			oman: {
+				en: 'Oman',
+				ar: 'عمان'
 			},
 			lebanon: {
 				en: 'Lebanon',
 				ar: 'لبنان'
 			},
-			'saudi arabia': {
-				en: 'Saudi Arabia',
-				ar: 'السعودية'
-			},
-			egypt: {
-				en: 'Egypt',
-				ar: 'مصر'
-			},
-			syria: {
-				en: 'Syria',
-				ar: 'سوريا'
-			},
-			tunisia: {
-				en: 'Tunisia',
-				ar: 'تونس'
+			bahrain: {
+				en: 'Bahrain',
+				ar: 'البحرين'
 			}
 		},
 		MarketCap: {
 			en: 'Market Cap',
-			ar: 'TODO'
+			ar: 'القيمة السوقية'
 		}
 	},
 	nav: {
@@ -52,99 +48,103 @@ const translations = {
 		Company: {
 			en: 'Company',
 			ar: 'الشركة'
+		},
+		Help: {
+			en: "Help",
+			ar: "مساعدة"
 		}
 	},
 	home: {
 		welcome: {
 			title: {
 				en: 'Our future starts here',
-				ar: 'TODO'
+				ar: 'يبدأ مستقبلنا هنا'
 			},
 			body: {
 				en: 'The first exchange to offer cash as a payment method to buy and sell crypto',
-				ar: 'TODO'
+				ar: 'أول منصة تسمح لشراء وبيع العملات الرقمية نقداً '
 			},
 			enter_email: {
 				en: 'Enter Email',
-				ar: 'TODO'
+				ar: 'أدخل بريدك'
 			},
 			start_investing: {
 				en: 'Start Investing',
-				ar: 'TODO'
+				ar: 'ابدا بالإستثمار'
 			}
 		},
 		courses: {
 			title: {
 				en: 'Free courses',
-				ar: 'TODO'
+				ar: 'دورات مجانية'
 			},
 			body: {
-				en: 'Online or in person in our offices',
-				ar: 'TODO'
+				en: 'Learn about crypto and win rewards',
+				ar: 'تعرف على العملات الرقمية واربح بتكوين'
 			},
 			button: {
 				en: 'Learn and earn crypto',
-				ar: 'TODO'
+				ar: 'تعلم واربح عملات رقمية'
 			}
 		},
 		lottery: {
 			title: {
 				en: 'Chance to win 100,000 USD in BTC after sign up',
-				ar: 'TODO'
+				ar: 'فرصة ربح 100,000 دولار أمريكي من البتكوين بعد التسجيل'
 			}
 		},
 		payment_methods: {
 			title: {
-				en: 'Cash, Credit/Debit, Paypal, and More',
-				ar: 'TODO'
+				en: 'Pay with cash, credit/debit or PayPal',
+				ar: 'دفع نقدي أو باستخدام بطاقات أو باي بال'
 			},
 		},
 		locations: {
 			title: {
 				en: 'Free courses',
-				ar: 'TODO'
+				ar: 'دورات مجانية'
 			},
 			button: {
 				en: 'Learn and earn crypto',
-				ar: 'TODO'
+				ar: 'تعلم واربح عملات رقمية'
 			}
 		},
-		cash_machines: {
+		cash_cards: {
 			title: {
-				en: 'Find the locations of the cash machines and how to use them',
-				ar: 'TODO'
+				en: 'How to buy and use Amam Cash Cards',
+				ar: 'كيفية شراء واستخدام بطاقة أمام المالية'
 			},
 			button: {
-				en: 'Cash Machines',
-				ar: 'TODO'
+				en: 'Amam Cash Cards',
+				ar: 'بطاقة أمام المالية'
 			}
 		},
 		forward: {
 			title: {
 				en: 'Forward... into the future',
-				ar: 'TODO'
+				ar: 'أمام... إلى المستقبل'
 			},
 			body: {
 				en: 'Tailored for the Middle East to build a better world for everyone',
-				ar: 'TODO'
+				ar: 'منصة مصممة للشرق الأوسط لخلق عالم أفضل للجميع'
 			},
 			button: {
 				en: 'Explore Regions',
-				ar: 'TODO'
+				ar: 'تعرف على المناطق'
 			}
 		},
 		kickstart: {
 			title: {
 				en: 'Kickstart your future and plan for tomorrow',
-				ar: 'TODO'
+				ar: 'انطلق نحو المستقبل وابدا بالتخطيط لعالم الغد'
 			},
 			begin_investing: {
 				en: 'Begin Investing',
-				ar: 'TODO'
+				ar: 'ابدا بالاستثمار'
 			},
 			download_app: {
 				en: 'Download App',
-				ar: 'TODO'
+				ar: 'حمل التطبيق'
 			}
 		}
 	},
@@ -153,55 +153,55 @@ const translations = {
 	company: {
 		company: {
 			en: 'Company',
-			ar: 'TODO'
+			ar: 'الشركة'
 		},
 		foundation: {
 			title: {
 				en: "We're building the foundation of tomorrow's world",
-				ar: 'TODO'
+				ar: 'نيني أساس عالم الغد لكي ننطلق معاً إلى المستقبل'
 			},
 			body: {
-				en: 'The Middle East has been alienated for too long from the cryptocurrency world due to a multiplicity of reasons (such as lack of knowledge, reliance on cash and a lack of opportunity). As such, our journey started in 2022, to solve the previously mentioned issues and building the foundation for tomorrow’s world.',
-				ar: 'TODO'
+				en: "Our journey started in 2022, to reshape the Middle East and propell it into the future. Amam’s mission is to build the foundation of tomorrow’s world by providing the Middle East with a cryptocurrency exchange platform tailored just for them.",
+				ar: '.بدأ مسيرنا في عام 2022 لتطوير الشرق الأوسط ونطلقها إلى المستقبل. هدفنا بناء ءساس عالم الغد من خلال أفضل منصة لشراء وبيع العملات الرقمية'
 			},
 			tagline: {
-				en: 'Amam is tailored to open the doors of opportunities.',
-				ar: 'TODO'
+				en: 'We open the doors of opportunity in',
+				ar: 'نفتح أبواب الفرص في'
 			}
 		},
 		team: {
 			title: {
 				en: 'Team',
-				ar: 'TODO'
+				ar: 'قادتنا'
 			},
 			zaid_role: {
 				en: 'Co-Founder, President & Chief Executive Officer',
-				ar: 'TODO'
+				ar: 'شريك مؤسس ورئيس الشركة والرئيس التنفيذي'
 			},
 			andres_role: {
 				en: 'Co-Founder & Chief Technology Officer',
-				ar: 'TODO'
+				ar: 'شريك مؤسس ورئيس قسم التكنولوجيا'
 			},
 			sharif_role: {
 				en: 'Vice President',
-				ar: 'TODO'
+				ar: 'نائب رئيس الشركة'
 			},
 			hareth_role: {
 				en: 'Chief Operations Officer',
-				ar: 'TODO'
+				ar: 'رئيس قسم العمليات'
 			},
 			muhi_role: {
 				en: 'Chief of Marketing and Education',
-				ar: 'TODO'
+				ar: 'رئيس قسم التسويق والتعليم'
 			}
 		},
 		blog: {
 			en: 'Blog',
-			ar: 'TODO'
+			ar: 'المدونة'
 		},
 		newsroom: {
 			en: 'Newsroom',
-			ar: 'TODO'
+			ar: 'الإخبارية'
 		}
 		// TODO
 	},
