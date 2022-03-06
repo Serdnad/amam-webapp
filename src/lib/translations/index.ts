@@ -6,7 +6,7 @@ const translations = {
 		},
 		coins: {},
 		countries: {
-			'united arab emirates': {
+			united_arab_emirates: {
 				en: 'United Arab Emirates',
 				ar: 'الإمارات'
 			},
