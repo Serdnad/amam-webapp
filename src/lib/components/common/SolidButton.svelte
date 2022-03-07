@@ -1,8 +1,11 @@
 <script lang="ts">
 	export let invertColors = false;
+	export let textOnly = false;
 </script>
 
-<button on:click class={invertColors ? 'inverted' : ''}><slot /></button>
+<button on:click class="{invertColors ? 'inverted' : ''} {textOnly ? 'text-only' : ''}"
+	><slot /></button
+>
 
 <style lang="scss">
 	button {
@@ -31,6 +34,11 @@
 			&:hover {
 				background: #dadbdb;
 			}
+		}
+
+		&.text-only {
+			background: none;
+			box-shadow: none;
 		}
 
 		// @media screen and (max-width: 560px) {

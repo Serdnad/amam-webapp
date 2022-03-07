@@ -1,10 +1,12 @@
 <script>
 	import { lang } from '$lib/stores/lang';
-	import { t } from '$lib/translations';
+	import { translate } from '$lib/translations';
 	import { setPreference } from '$lib/utils/preferences';
 	import SolidButton from '../common/SolidButton.svelte';
 	import Spacer from '../common/Spacer.svelte';
 	import NavDrawerButton from '../layout/NavDrawerButton.svelte';
+
+	$: t = translate($lang);
 
 	function toggleLanguage() {
 		$lang = $lang == 'en' ? 'ar' : 'en';
@@ -20,7 +22,7 @@
 			<div class="row">
 				<img src="/icons/amam.png" />
 				<Spacer width="16px" />
-				<h2>{t('common.amam', $lang)}</h2>
+				<h2>{t('common.amam')}</h2>
 			</div>
 		</a>
 	</div>
@@ -31,20 +33,22 @@
 				<div class="row">
 					<img src="/icons/amam.png" />
 					<Spacer width="16px" />
-					<h2>{t('common.amam', $lang)}</h2>
+					<h2>{t('common.amam')}</h2>
 				</div>
 			</a>
 
-			<a href="/market" target="_self">{t('nav.Market', $lang)}</a>
-			<a href="/learn" target="_self">{t('nav.Learn', $lang)}</a>
-			<a href="/company" target="_self">{t('nav.Company', $lang)}</a>
-			<a href="/help" target="_self">Help</a>
+			<!-- <a href="/market" target="_self">{t('nav.Market')}</a> -->
+			<a href="/learn" target="_self">{t('nav.Learn')}</a>
+			<a href="/company" target="_self">{t('nav.Company')}</a>
+			<a href="/help" target="_self">{t('nav.Help')}</a>
 		</div>
 	</div>
 
 	<div class="expanded" />
 
-	<SolidButton on:click={toggleLanguage}>Lang اللغة</SolidButton>
+	<div style="direction: ltr;">
+		<SolidButton on:click={toggleLanguage} textOnly={true}>Lang اللغة</SolidButton>
+	</div>
 </header>
 
 <style lang="scss">
@@ -103,6 +107,6 @@
 	a {
 		text-decoration: none;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: 22px;
 	}
 </style>

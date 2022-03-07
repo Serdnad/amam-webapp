@@ -3,6 +3,7 @@
 	import Card from '$lib/components/common/Card.svelte';
 	import SolidButton from '$lib/components/common/SolidButton.svelte';
 	import Spacer from '$lib/components/common/Spacer.svelte';
+	import { COUNTRIES } from '$lib/constants/countries';
 	import { lang } from '$lib/stores/lang';
 	import { translate } from '$lib/translations';
 
@@ -116,8 +117,8 @@
 	<div class="grid-one-third-row">
 		<Card expand>
 			<!-- <div style="display: flex; flex-direction: column; justify-content: space-between;"> -->
-			<h2>{t('home.cash_machines.title')}</h2>
-			<SolidButton>{t('home.cash_machines.button')}</SolidButton>
+			<h2>{t('home.cash_cards.title')}</h2>
+			<SolidButton>{t('home.cash_cards.button')}</SolidButton>
 			<!-- </div> -->
 		</Card>
 	</div>
@@ -128,14 +129,12 @@
 			<h2 class="gray">{t('home.forward.body')}</h2>
 
 			<div class="country-grid">
-				{#each new Array(7) as _}
+				{#each COUNTRIES as country}
 					<div class="country-card">
-						<img src="/icons/countries/lebanon.png" alt="" />
-						<p>{t('common.countries.lebanon')}</p>
+						<img src={country.img} alt="" />
+						<p>{t(country.key)}</p>
 					</div>
 				{/each}
-
-				<SolidButton>{t('home.forward.button')}</SolidButton>
 			</div>
 		</Card>
 	</div>
@@ -217,7 +216,9 @@
 			bottom: 16px;
 			border-radius: 50%;
 			background: #1a8af0;
-			width: 100%;
+
+			max-width: 100%;
+			aspect-ratio: 1;
 
 			z-index: 0;
 		}
@@ -242,12 +243,13 @@
 			flex: 1;
 			position: relative;
 
-			background: #f6f6f6;
+			// background: #f6f6f6;
+			background: #1c1a27;
 			padding: 16px;
 			border-radius: 10px;
 
 			max-height: 200px;
-			min-width: 240px;
+			min-width: 220px;
 
 			img {
 				position: absolute;
@@ -259,13 +261,13 @@
 			}
 
 			h3 {
-				color: black;
+				// color: black;
 				font-size: 26px;
 				margin: 0;
 			}
 
 			p {
-				color: black;
+				// color: black;
 				margin-top: 4px;
 				margin-bottom: 0;
 
@@ -276,16 +278,22 @@
 
 	.country-grid {
 		display: grid;
-		grid-template-columns: repeat(auto, minmax(200px, 1fr));
+		grid-template-columns: repeat(3, minmax(200px, 1fr));
 		gap: 32px;
+
+		@media screen and (max-width: 480px) {
+			grid-template-columns: repeat(1, minmax(200px, 1fr));
+		}
 
 		.country-card {
 			display: flex;
 			align-items: center;
 			padding: 12px 16px;
 
-			background: #eaeaea;
+			// background: #eaeaea;
+			background: #292638;
 			border-radius: 12px;
+			color: white;
 
 			img {
 				width: 48px;
@@ -295,7 +303,7 @@
 			p {
 				font-size: 26px;
 				margin: 0 16px;
-				color: black;
+				// color: black;
 				font-weight: 600;
 			}
 		}

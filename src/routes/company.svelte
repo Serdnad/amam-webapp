@@ -1,6 +1,7 @@
 <script>
 	import Card from '$lib/components/common/Card.svelte';
 	import Content from '$lib/components/layout/Content.svelte';
+	import { COUNTRIES } from '$lib/constants/countries';
 	import { lang } from '$lib/stores/lang';
 	import { translate } from '$lib/translations';
 
@@ -30,13 +31,22 @@
 				<h2>{t('company.foundation.tagline')}</h2>
 
 				<div class="country-grid">
+					{#each COUNTRIES as country}
+						<div class="country-card">
+							<img src={country.img} alt="" />
+							<p>{t(country.key)}</p>
+						</div>
+					{/each}
+				</div>
+
+				<!-- <div class="country-grid">
 					{#each ['Jordan', 'Saudi Arabia', 'Syria', 'Lebanon', 'Egypt', 'Tunisia'] as country}
 						<div class="country-card">
 							<img src="/icons/countries/{country.toLowerCase().replace(' ', '_')}.png" alt="" />
 							<p>{t('common.countries.' + country.toLowerCase())}</p>
 						</div>
 					{/each}
-				</div>
+				</div> -->
 			</Card>
 		</div>
 
@@ -127,27 +137,59 @@
 		}
 	}
 
+	// .country-grid {
+	// 	display: grid;
+	// 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	// 	gap: 16px;
+
+	// 	.country-card {
+	// 		display: flex;
+	// 		align-items: center;
+	// 		padding: 8px 16px;
+
+	// 		background: #eaeaea;
+	// 		border-radius: 8px;
+
+	// 		img {
+	// 			width: 32px;
+	// 			height: 32px;
+	// 		}
+
+	// 		p {
+	// 			margin: 0 16px;
+	// 			color: black;
+	// 			font-weight: 600;
+	// 		}
+	// 	}
+	// }
 	.country-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		gap: 16px;
+		grid-template-columns: repeat(3, minmax(200px, 1fr));
+		gap: 32px;
+
+		@media screen and (max-width: 480px) {
+			grid-template-columns: repeat(1, minmax(200px, 1fr));
+		}
 
 		.country-card {
 			display: flex;
 			align-items: center;
-			padding: 8px 16px;
+			padding: 12px 16px;
 
-			background: #eaeaea;
-			border-radius: 8px;
+			// background: #eaeaea;
+			background: #292638;
+			border-radius: 12px;
+			color: white;
 
 			img {
-				width: 32px;
-				height: 32px;
+				width: 48px;
+				height: 48px;
 			}
 
 			p {
+				font-size: 26px;
 				margin: 0 16px;
-				color: black;
+				// color: black;
 				font-weight: 600;
 			}
 		}

@@ -4,10 +4,14 @@ const translations = {
 			en: 'amam',
 			ar: 'أمام'
 		},
+		search: {
+			en: 'Search',
+			ar: 'TODO'
+		},
 		coins: {},
 		countries: {
 			united_arab_emirates: {
-				en: 'United Arab Emirates',
+				en: 'UAE',
 				ar: 'الإمارات'
 			},
 			saudi_arabia: {
@@ -50,8 +54,8 @@ const translations = {
 			ar: 'الشركة'
 		},
 		Help: {
-			en: "Help",
-			ar: "مساعدة"
+			en: 'Help',
+			ar: 'مساعدة'
 		}
 	},
 	home: {
@@ -97,7 +101,7 @@ const translations = {
 			title: {
 				en: 'Pay with cash, credit/debit or PayPal',
 				ar: 'دفع نقدي أو باستخدام بطاقات أو باي بال'
-			},
+			}
 		},
 		locations: {
 			title: {
@@ -161,7 +165,7 @@ const translations = {
 				ar: 'نيني أساس عالم الغد لكي ننطلق معاً إلى المستقبل'
 			},
 			body: {
-				en: "Our journey started in 2022, to reshape the Middle East and propell it into the future. Amam’s mission is to build the foundation of tomorrow’s world by providing the Middle East with a cryptocurrency exchange platform tailored just for them.",
+				en: 'Our journey started in 2022, to reshape the Middle East and propell it into the future. Amam’s mission is to build the foundation of tomorrow’s world by providing the Middle East with a cryptocurrency exchange platform tailored just for them.',
 				ar: '.بدأ مسيرنا في عام 2022 لتطوير الشرق الأوسط ونطلقها إلى المستقبل. هدفنا بناء ءساس عالم الغد من خلال أفضل منصة لشراء وبيع العملات الرقمية'
 			},
 			tagline: {
