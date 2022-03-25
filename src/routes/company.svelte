@@ -53,7 +53,8 @@
 		<div>
 			<grid class="team-grid">
 				<div class="teammate">
-					<div class="circle" />
+					<img src="/images/zaid.jpeg" />
+					<!-- <div class="circle" /> -->
 					<h2>Zaid Abdul-Hadi</h2>
 					<h4 class="gray">{t('company.team.zaid_role')}</h4>
 				</div>
@@ -68,12 +69,13 @@
 					<h4 class="gray">{t('company.team.sharif_role')}</h4>
 				</div>
 				<div class="teammate">
-					<div class="circle" />
+					<img src="/images/hareth.png" />
 					<h2>Hareth Hmoud</h2>
 					<h4 class="gray">{t('company.team.hareth_role')}</h4>
 				</div>
 				<div class="teammate">
-					<div class="circle" />
+					<img src="/images/muhi.png" />
+
 					<h2>Muhieddeen Al-Jawhary</h2>
 					<h4 class="gray">{t('company.team.muhi_role')}</h4>
 				</div>
@@ -194,6 +196,19 @@
 			// align-items: center;
 
 			.circle {
+				background: #1a8af0;
+
+				min-width: 240px;
+				max-width: 320px;
+
+				min-height: 280px;
+				max-height: 280px;
+				aspect-ratio: 1;
+
+				border-radius: 50%;
+			}
+
+			img {
 				min-width: 240px;
 				max-width: 320px;
 
@@ -201,7 +216,6 @@
 				max-height: 280px;
 				aspect-ratio: 1;
 
-				background: #1a8af0;
 				border-radius: 50%;
 			}
 
