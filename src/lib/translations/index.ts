@@ -6,7 +6,7 @@ const translations = {
 		},
 		search: {
 			en: 'Search',
-			ar: 'TODO'
+			ar: 'ابحث'
 		},
 		coins: {},
 		countries: {
@@ -70,21 +70,21 @@ const translations = {
 			},
 			phone_number: {
 				en: 'Phone Number',
-				ar: 'TODO'
+				ar: 'رقم الهاتف'
 			},
 			start_investing: {
 				en: 'Start Investing',
 				ar: 'ابدا بالإستثمار'
 			},
 			join_beta: {
-				en: 'Join Beta',
-				ar: 'TODO'
+				en: 'Coming Soon',
+				ar: 'قريبا'
 			}
 		},
 		platform: {
 			title: {
 				en: 'First platform to offer cash as a payment method to buy and sell Bitcoin and other cryptocurrencies',
-				ar: 'TODO'
+				ar: 'أول منصة تسمح لشراء وبيع بتكوين وعملات رقمية أخرى نقداً'
 			}
 		},
 		courses: {
@@ -94,65 +94,65 @@ const translations = {
 			},
 			body: {
 				en: 'Win 100,000 USD in Bitcoin while learning about cryptocurrencies',
-				ar: 'TODO'
+				ar: 'اربح 100,000 دولار أمريكي من عملة بتكوين خلال التعلم'
 			},
 			button: {
 				en: 'Start Learning',
-				ar: 'TODO'
+				ar: 'ابدا بالتعلم'
 			}
 		},
 		withdraw: {
 			text: {
 				en: 'and withdraw cash from Withdrawal Stands',
-				ar: 'TODO'
+				ar: 'واسحب النقود من كشك السحب'
 			},
 			info: {
 				en: 'Cash Card Info',
-				ar: 'TODO'
+				ar: 'معلومان البطاقات المالية'
 			},
 			stand_locations: {
 				en: 'Stand Locations',
-				ar: 'TODO'
+				ar: 'مواقع الأكشاك'
 			}
 		},
 		cash_cards: {
 			title: {
 				en: 'Buy and sell crypto using cash',
-				ar: 'TODO'
+				ar: 'شراء وبيع العملات الرقمية نقداً'
 			},
 			body: {
 				en: 'Amam allows you to buy cryptocurrencies like Bitcoin and Ethereum using cash with Amam Cash Cards',
-				ar: 'TODO'
+				ar: 'تسمح منصة أمام لشراء وبيع العملات الرقمية مثل بتكوين وايثيريوم نقداً بإستخدام البطاقات المالية'
 			}
 		},
 		kickstart: {
 			title: {
 				en: 'Kickstart your future with the simplest and safest way to buy and sell crypto',
-				ar: 'TODO'
+				ar: 'انطلق إلى المستقبل من خلال أكثر طريقة بسيطة وآمنة لشراء وبيغ العملات الرقمية'
 			},
 			secure: {
 				en: 'Secure',
-				ar: 'TODO'
+				ar: 'آمنة'
 			},
 			secure_description: {
 				en: 'We store your funds safely',
-				ar: 'TODO'
+				ar: 'نحتفظ بأموالك بطريقة آمنة'
 			},
 			simple: {
 				en: 'Simple',
-				ar: 'TODO'
+				ar: 'بسيطة'
 			},
 			simple_description: {
 				en: 'We offer 50+ cryptos to trade',
-				ar: 'TODO'
+				ar: 'نوفر أكثر من 50 عملة رقمية'
 			},
 			for_all: {
 				en: 'For All',
-				ar: 'TODO'
+				ar: 'للجميع'
 			},
 			for_all_description: {
 				en: 'We offer cash as a payment method',
-				ar: 'TODO'
+				ar: 'نسمح للشراء والبيع نقداً'
 			}
 		}
 	},
@@ -160,7 +160,7 @@ const translations = {
 	learn: {
 		title: {
 			en: 'Learn',
-			ar: 'TODO'
+			ar: 'تعلم'
 		}
 	},
 	company: {
@@ -188,8 +188,8 @@ const translations = {
 				ar: 'قادتنا'
 			},
 			zaid_role: {
-				en: 'Co-Founder, President & Chief Executive Officer',
-				ar: 'شريك مؤسس ورئيس الشركة والرئيس التنفيذي'
+				en: 'Co-Founder, Chief Executive Officer & President',
+				ar: 'شريك مؤسس والرئيس التنفيذي ورئيس الشركة'
 			},
 			andres_role: {
 				en: 'Co-Founder & Chief Technology Officer',
