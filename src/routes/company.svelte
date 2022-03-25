@@ -10,7 +10,7 @@
 </script>
 
 <ContentSection background="var(--primary-color)">
-	<div class="row">
+	<div class="section-header row">
 		<div class="rotated">
 			<h1>{t('company.company')}</h1>
 		</div>
@@ -48,35 +48,37 @@
 </ContentSection>
 
 <ContentSection>
-	<h1>Team</h1>
-	<div>
-		<grid class="team-grid">
-			<div class="teammate">
-				<div class="circle" />
-				<h2>Zaid Abdul-Hadi</h2>
-				<h4 class="gray">{t('company.team.zaid_role')}</h4>
-			</div>
-			<div class="teammate">
-				<div class="circle" />
-				<h2>Andres Gutierrez</h2>
-				<h4 class="gray">{t('company.team.andres_role')}</h4>
-			</div>
-			<div class="teammate">
-				<div class="circle" />
-				<h2>Sharif Atassi</h2>
-				<h4 class="gray">{t('company.team.sharif_role')}</h4>
-			</div>
-			<div class="teammate">
-				<div class="circle" />
-				<h2>Hareth Hmoud</h2>
-				<h4 class="gray">{t('company.team.hareth_role')}</h4>
-			</div>
-			<div class="teammate">
-				<div class="circle" />
-				<h2>Muhieddeen Al-Jawhary</h2>
-				<h4 class="gray">{t('company.team.muhi_role')}</h4>
-			</div>
-		</grid>
+	<div class="section-team">
+		<h1>Team</h1>
+		<div>
+			<grid class="team-grid">
+				<div class="teammate">
+					<div class="circle" />
+					<h2>Zaid Abdul-Hadi</h2>
+					<h4 class="gray">{t('company.team.zaid_role')}</h4>
+				</div>
+				<div class="teammate">
+					<div class="circle" />
+					<h2>Andres Gutierrez</h2>
+					<h4 class="gray">{t('company.team.andres_role')}</h4>
+				</div>
+				<div class="teammate">
+					<div class="circle" />
+					<h2>Sharif Atassi</h2>
+					<h4 class="gray">{t('company.team.sharif_role')}</h4>
+				</div>
+				<div class="teammate">
+					<div class="circle" />
+					<h2>Hareth Hmoud</h2>
+					<h4 class="gray">{t('company.team.hareth_role')}</h4>
+				</div>
+				<div class="teammate">
+					<div class="circle" />
+					<h2>Muhieddeen Al-Jawhary</h2>
+					<h4 class="gray">{t('company.team.muhi_role')}</h4>
+				</div>
+			</grid>
+		</div>
 	</div>
 </ContentSection>
 
@@ -105,9 +107,13 @@
 		transform: rotateZ(-90deg);
 	}
 
+	.section-header {
+		justify-content: space-between;
+	}
+
 	.team-image {
 		width: 60%;
-		margin: -32px 0;
+		margin: -33px 0;
 	}
 
 	.foundation-card {
@@ -156,7 +162,8 @@
 			padding: 12px 16px;
 
 			// background: #eaeaea;
-			background: #292638;
+			// background: #292638;
+			background: #dddddd;
 			border-radius: 12px;
 			color: white;
 
@@ -210,6 +217,20 @@
 
 				margin: 0;
 			}
+		}
+	}
+
+	.section-team {
+		h1 {
+			color: var(--primary-color);
+		}
+		h2 {
+			color: black;
+		}
+
+		h4 {
+			color: #333333;
+			font-weight: 300;
 		}
 	}
 </style>

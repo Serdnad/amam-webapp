@@ -145,6 +145,8 @@
 				border: 2px solid white;
 				border-radius: 12px;
 
+				border-right: none;
+
 				font-size: larger;
 				color: white;
 				&::placeholder {

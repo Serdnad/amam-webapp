@@ -14,42 +14,50 @@
 	<div class="row">
 		<h1 style="margin: 0;">Learn</h1>
 		<Spacer width={'32px'} />
-		<SearchBar expanded={true} />
+		<!-- <SearchBar expanded={true} /> -->
 	</div>
 
 	<div class="lessons-grid">
 		<div class="lesson-card" on:click={openLessons}>
-			<h2>Easy Trading</h2>
+			<div>
+				<h2>Easy Trading</h2>
 
-			<p>Learn how to buy and sell cryptocurrencies on our exchange.</p>
-			<p>If you're completely new to crypto, start here!</p>
+				<p>Learn how to buy and sell cryptocurrencies on our exchange.</p>
+				<p>If you're completely new to crypto, start here!</p>
+			</div>
 		</div>
 
 		<div class="lesson-card" on:click={openLessons}>
-			<h2>Understanding Blockchain</h2>
+			<div>
+				<h2>Understanding Blockchain</h2>
 
-			<p>
-				Learn how blockchain technology works under the hood, and how it can build different
-				applications more securely and efficiently.
-			</p>
+				<p>
+					Learn how blockchain technology works under the hood, and how it can build different
+					applications more securely and efficiently.
+				</p>
+			</div>
 		</div>
 
 		<div class="lesson-card" on:click={openLessons}>
-			<h2>Evaluating Cryptocurrencies</h2>
+			<div>
+				<h2>Evaluating Cryptocurrencies</h2>
 
-			<p>
-				Learn what to look for when evaluating a new cryptocurrency, and how major the technologies
-				differ.
-			</p>
+				<p>
+					Learn what to look for when evaluating a new cryptocurrency, and how major the
+					technologies differ.
+				</p>
+			</div>
 		</div>
 
 		<div class="lesson-card" on:click={openLessons}>
-			<h2>Trading with Indicators</h2>
+			<div>
+				<h2>Trading with Indicators</h2>
 
-			<p>
-				Get an introduction to sophisticated trading, through technical indicators and tested
-				methods for combining them.
-			</p>
+				<p>
+					Get an introduction to sophisticated trading, through technical indicators and tested
+					methods for combining them.
+				</p>
+			</div>
 		</div>
 	</div>
 </ContentSection>
@@ -65,8 +73,17 @@
 			background: white;
 			border-radius: 12px;
 
-			padding: 8px 24px;
-			box-shadow: 0 0 4px 2px #22222266;
+			padding: 0 12px;
+			box-shadow: 0 0 4px 3px #22222244;
+
+			background: var(--primary-color);
+
+			div {
+				background: white;
+				height: calc(100% - 16px);
+
+				padding: 8px 16px;
+			}
 			// border: ;
 		}
 

@@ -26,7 +26,8 @@
 	input {
 		border: none;
 		border-radius: 12px;
-		background: #292638;
+		// background: #292638;
+		background: #cccccc;
 		padding: 8px;
 		padding-inline-start: 48px;
 
