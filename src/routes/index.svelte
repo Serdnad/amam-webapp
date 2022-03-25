@@ -80,19 +80,19 @@
 
 		<div class="row">
 			<div class="feature-col">
-				IMG
+				<img src="/icons/lock.png" />
 				<h3>Secure</h3>
 				<p>We store your funds safely</p>
 			</div>
 
 			<div class="feature-col">
-				IMG
+				<img src="/icons/coins.png" />
 				<h3>Simple</h3>
 				<p>We offer 50+ cryptos to trade</p>
 			</div>
 
 			<div class="feature-col">
-				IMG
+				<img src="/icons/wallet.png" />
 				<h3>For All</h3>
 				<p>We offer cash as a payment method</p>
 			</div>
@@ -118,9 +118,12 @@
 
 		h3 {
 			margin-bottom: 0;
+			font-size: xx-large;
+			margin-top: 16px;
 		}
 		p {
 			margin: 0;
+			font-size: larger;
 		}
 	}
 
