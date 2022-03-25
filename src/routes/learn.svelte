@@ -1,5 +1,6 @@
 <script>
 	import Card from '$lib/components/common/Card.svelte';
+	import ContentSection from '$lib/components/common/ContentSection.svelte';
 	import SearchBar from '$lib/components/common/SearchBar.svelte';
 	import Spacer from '$lib/components/common/Spacer.svelte';
 	import Content from '$lib/components/layout/Content.svelte';
@@ -9,51 +10,49 @@
 	}
 </script>
 
-<Content>
-	<Card>
-		<div class="row">
-			<h1 style="margin: 0;">Learn</h1>
-			<Spacer width={'32px'} />
-			<SearchBar expanded={true} />
+<ContentSection background="white" light={true}>
+	<div class="row">
+		<h1 style="margin: 0;">Learn</h1>
+		<Spacer width={'32px'} />
+		<SearchBar expanded={true} />
+	</div>
+
+	<div class="lessons-grid">
+		<div class="lesson-card" on:click={openLessons}>
+			<h2>Easy Trading</h2>
+
+			<p>Learn how to buy and sell cryptocurrencies on our exchange.</p>
+			<p>If you're completely new to crypto, start here!</p>
 		</div>
 
-		<div class="lessons-grid">
-			<div class="lesson-card" on:click={openLessons}>
-				<h2>Easy Trading</h2>
+		<div class="lesson-card" on:click={openLessons}>
+			<h2>Understanding Blockchain</h2>
 
-				<p>Learn how to buy and sell cryptocurrencies on our exchange.</p>
-				<p>If you're completely new to crypto, start here!</p>
-			</div>
-
-			<div class="lesson-card" on:click={openLessons}>
-				<h2>Understanding Blockchain</h2>
-
-				<p>
-					Learn how blockchain technology works under the hood, and how it can build different
-					applications more securely and efficiently.
-				</p>
-			</div>
-
-			<div class="lesson-card" on:click={openLessons}>
-				<h2>Evaluating Cryptocurrencies</h2>
-
-				<p>
-					Learn what to look for when evaluating a new cryptocurrency, and how major the
-					technologies differ.
-				</p>
-			</div>
-
-			<div class="lesson-card" on:click={openLessons}>
-				<h2>Trading with Indicators</h2>
-
-				<p>
-					Get an introduction to sophisticated trading, through technical indicators and tested
-					methods for combining them.
-				</p>
-			</div>
+			<p>
+				Learn how blockchain technology works under the hood, and how it can build different
+				applications more securely and efficiently.
+			</p>
 		</div>
-	</Card>
-</Content>
+
+		<div class="lesson-card" on:click={openLessons}>
+			<h2>Evaluating Cryptocurrencies</h2>
+
+			<p>
+				Learn what to look for when evaluating a new cryptocurrency, and how major the technologies
+				differ.
+			</p>
+		</div>
+
+		<div class="lesson-card" on:click={openLessons}>
+			<h2>Trading with Indicators</h2>
+
+			<p>
+				Get an introduction to sophisticated trading, through technical indicators and tested
+				methods for combining them.
+			</p>
+		</div>
+	</div>
+</ContentSection>
 
 <style lang="scss">
 	.lessons-grid {

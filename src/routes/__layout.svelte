@@ -26,6 +26,10 @@
 </div>
 
 <style lang="scss">
+	:root {
+		--primary-color: #1a89ec;
+	}
+
 	:global(*) {
 		color: white;
 		font-family: Changa, Cereal, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
@@ -33,7 +37,7 @@
 
 	:global(body) {
 		margin: 0;
-		background: #292638;
+		// background: #292638;
 	}
 
 	:global(.mobile-only) {
@@ -68,9 +72,6 @@
 	}
 
 	main {
-		max-width: 1248px;
-		margin: auto;
-
 		min-height: calc(100vh - 102px - 320px);
 	}
 
@@ -90,7 +91,7 @@
 	}
 
 	:global(.gray) {
-		color: #cccccc;
+		color: #dddddd;
 	}
 
 	:global(.dense) {

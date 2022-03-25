@@ -32,7 +32,7 @@
 		border-radius: 8px;
 
 		&:hover {
-			background: #cccccc33;
+			background: #dddddd33;
 		}
 
 		&.active {

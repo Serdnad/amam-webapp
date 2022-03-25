@@ -15,20 +15,10 @@
 </script>
 
 <header>
-	<div class="mobile-only">
-		<NavDrawerButton />
+	<div class="content">
+		<div class="mobile-only">
+			<NavDrawerButton />
 
-		<a href="/" target="_self">
-			<div class="row">
-				<img src="/icons/amam.png" />
-				<Spacer width="16px" />
-				<h2>{t('common.amam')}</h2>
-			</div>
-		</a>
-	</div>
-
-	<div class="desktop-only expanded-links">
-		<div class="row expanded2 links">
 			<a href="/" target="_self">
 				<div class="row">
 					<img src="/icons/amam.png" />
@@ -36,23 +26,39 @@
 					<h2>{t('common.amam')}</h2>
 				</div>
 			</a>
-
-			<!-- <a href="/market" target="_self">{t('nav.Market')}</a> -->
-			<a href="/learn" target="_self">{t('nav.Learn')}</a>
-			<a href="/company" target="_self">{t('nav.Company')}</a>
-			<a href="/help" target="_self">{t('nav.Help')}</a>
 		</div>
-	</div>
 
-	<div class="expanded" />
+		<div class="desktop-only expanded-links">
+			<div class="row expanded2 links">
+				<a href="/" target="_self">
+					<div class="row">
+						<img src="/icons/amam.png" />
+						<Spacer width="16px" />
+						<h2>{t('common.amam')}</h2>
+					</div>
+				</a>
 
-	<div style="direction: ltr;">
-		<SolidButton on:click={toggleLanguage} textOnly={true}>Lang اللغة</SolidButton>
+				<!-- <a href="/market" target="_self">{t('nav.Market')}</a> -->
+				<a href="/learn" target="_self">{t('nav.Learn')}</a>
+				<a href="/company" target="_self">{t('nav.Company')}</a>
+				<a href="/help" target="_self">{t('nav.Help')}</a>
+			</div>
+		</div>
+
+		<div class="expanded" />
+
+		<div style="direction: ltr;">
+			<SolidButton on:click={toggleLanguage} textOnly={true}>Lang اللغة</SolidButton>
+		</div>
 	</div>
 </header>
 
 <style lang="scss">
 	header {
+		background: var(--primary-color);
+	}
+
+	.content {
 		max-width: 1248px;
 		margin: auto;
 

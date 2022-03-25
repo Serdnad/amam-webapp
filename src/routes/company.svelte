@@ -1,5 +1,6 @@
 <script>
 	import Card from '$lib/components/common/Card.svelte';
+	import ContentSection from '$lib/components/common/ContentSection.svelte';
 	import Content from '$lib/components/layout/Content.svelte';
 	import { COUNTRIES } from '$lib/constants/countries';
 	import { lang } from '$lib/stores/lang';
@@ -8,38 +9,34 @@
 	$: t = translate($lang);
 </script>
 
-<Content>
-	<div class="grid">
-		<div class="grid-row">
-			<Card>
-				<div class="row">
-					<div class="rotated">
-						<h1>{t('company.company')}</h1>
-					</div>
-					<img class="team-image" src="/images/team.png" alt="" />
+<ContentSection background="var(--primary-color)">
+	<div class="row">
+		<div class="rotated">
+			<h1>{t('company.company')}</h1>
+		</div>
+		<img class="team-image" src="/images/team.png" alt="" />
+	</div>
+</ContentSection>
+
+<ContentSection background="white" light={true}>
+	<div class="foundation-card grid-row">
+		<h1>{t('company.foundation.title')}</h1>
+		<h3 class="gray">
+			{t('company.foundation.body')}
+		</h3>
+
+		<h2>{t('company.foundation.tagline')}</h2>
+
+		<div class="country-grid">
+			{#each COUNTRIES as country}
+				<div class="country-card">
+					<img src={country.img} alt="" />
+					<p>{t(country.key)}</p>
 				</div>
-			</Card>
+			{/each}
 		</div>
 
-		<div class="foundation-card grid-row">
-			<Card>
-				<h1>{t('company.foundation.title')}</h1>
-				<h3 class="gray">
-					{t('company.foundation.body')}
-				</h3>
-
-				<h2>{t('company.foundation.tagline')}</h2>
-
-				<div class="country-grid">
-					{#each COUNTRIES as country}
-						<div class="country-card">
-							<img src={country.img} alt="" />
-							<p>{t(country.key)}</p>
-						</div>
-					{/each}
-				</div>
-
-				<!-- <div class="country-grid">
+		<!-- <div class="country-grid">
 					{#each ['Jordan', 'Saudi Arabia', 'Syria', 'Lebanon', 'Egypt', 'Tunisia'] as country}
 						<div class="country-card">
 							<img src="/icons/countries/{country.toLowerCase().replace(' ', '_')}.png" alt="" />
@@ -47,59 +44,41 @@
 						</div>
 					{/each}
 				</div> -->
-			</Card>
-		</div>
-
-		<div class="grid-row">
-			<Card>
-				<h1>Team</h1>
-				<div>
-					<grid class="team-grid">
-						<div class="teammate">
-							<div class="circle" />
-							<h2>Zaid Abdul-Hadi</h2>
-							<h4 class="gray">{t('company.team.zaid_role')}</h4>
-						</div>
-						<div class="teammate">
-							<div class="circle" />
-							<h2>Andres Gutierrez</h2>
-							<h4 class="gray">{t('company.team.andres_role')}</h4>
-						</div>
-						<div class="teammate">
-							<div class="circle" />
-							<h2>Sharif Atassi</h2>
-							<h4 class="gray">{t('company.team.sharif_role')}</h4>
-						</div>
-						<div class="teammate">
-							<div class="circle" />
-							<h2>Hareth Hmoud</h2>
-							<h4 class="gray">{t('company.team.hareth_role')}</h4>
-						</div>
-						<div class="teammate">
-							<div class="circle" />
-							<h2>Muhieddeen Al-Jawhary</h2>
-							<h4 class="gray">{t('company.team.muhi_role')}</h4>
-						</div>
-					</grid>
-				</div>
-			</Card>
-		</div>
-
-		<div class="grid-one-third">
-			<Card expand>
-				<h1>{t('company.blog')}</h1>
-				<h1>COMING SOON</h1>
-			</Card>
-		</div>
-
-		<div class="grid-two-thirds">
-			<Card expand>
-				<h1>{t('company.newsroom')}</h1>
-				<h1>COMING SOON</h1>
-			</Card>
-		</div>
 	</div>
-</Content>
+</ContentSection>
+
+<ContentSection>
+	<h1>Team</h1>
+	<div>
+		<grid class="team-grid">
+			<div class="teammate">
+				<div class="circle" />
+				<h2>Zaid Abdul-Hadi</h2>
+				<h4 class="gray">{t('company.team.zaid_role')}</h4>
+			</div>
+			<div class="teammate">
+				<div class="circle" />
+				<h2>Andres Gutierrez</h2>
+				<h4 class="gray">{t('company.team.andres_role')}</h4>
+			</div>
+			<div class="teammate">
+				<div class="circle" />
+				<h2>Sharif Atassi</h2>
+				<h4 class="gray">{t('company.team.sharif_role')}</h4>
+			</div>
+			<div class="teammate">
+				<div class="circle" />
+				<h2>Hareth Hmoud</h2>
+				<h4 class="gray">{t('company.team.hareth_role')}</h4>
+			</div>
+			<div class="teammate">
+				<div class="circle" />
+				<h2>Muhieddeen Al-Jawhary</h2>
+				<h4 class="gray">{t('company.team.muhi_role')}</h4>
+			</div>
+		</grid>
+	</div>
+</ContentSection>
 
 <style lang="scss">
 	.grid {

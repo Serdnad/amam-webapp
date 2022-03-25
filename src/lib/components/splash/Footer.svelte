@@ -23,12 +23,7 @@
 			<a href="/terms" target="_self" class="header">Terms</a>
 
 			<div class="left-section">
-				<p class="license-text">
-					Amam W.L.L is a company licensed by The Central Bank of Bahrain. Our headquarters lie in
-					Manama, Bahrain’s capital.
-				</p>
-
-				<h5>Amam W.L.L 2022 All Rights Reserved</h5>
+				<h5>Amam FZC 2022 All Rights Reserved</h5>
 				<div class="socials">
 					<a href="https:/twitter.com"><img src="/icons/twitter.png" /></a>
 					<a href="https:/twitter.com"><img style="padding: 3px;" src="/icons/facebook.png" /></a>
@@ -43,10 +38,8 @@
 			</ul>
 
 			<ul>
-				<li><a>Cash machines</a></li>
-				<li><a>Locations</a></li>
-				<li><a>How to use</a></li>
-				<li><a>Machines</a></li>
+				<li><a>Cash Cards</a></li>
+				<li><a>Stands</a></li>
 				<li><a>Help Center</a></li>
 			</ul>
 
@@ -62,8 +55,8 @@
 
 <style lang="scss">
 	footer {
-		background: #384250;
-		margin-top: 32px;
+		background: var(--primary-color);
+		// margin-top: 32px;
 		padding: 0 32px;
 		padding-top: 24px;
 	}
@@ -93,7 +86,7 @@
 		a {
 			text-decoration: none;
 			align-self: center;
-			color: #cccccc;
+			color: #dddddd;
 
 			&.header {
 				font-size: 24px;
@@ -104,12 +97,14 @@
 		.left-section {
 			grid-column-end: span 3;
 			padding-right: 32px;
+
+			align-self: flex-end;
 		}
 
 		.license-text {
 			font-size: 20px;
 			line-height: 1.8;
-			color: #cccccc;
+			color: #dddddd;
 		}
 
 		ul {
