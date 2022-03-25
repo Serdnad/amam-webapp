@@ -80,19 +80,19 @@
 
 		<div class="row">
 			<div class="feature-col">
-				<img src="/icons/lock.png" />
+				<img src="/images/bitcoin_man.png" />
 				<h3>Secure</h3>
 				<p>We store your funds safely</p>
 			</div>
 
 			<div class="feature-col">
-				<img src="/icons/coins.png" />
+				<img src="/images/vending.png" />
 				<h3>Simple</h3>
 				<p>We offer 50+ cryptos to trade</p>
 			</div>
 
 			<div class="feature-col">
-				<img src="/icons/wallet.png" />
+				<img src="/images/methods.png" />
 				<h3>For All</h3>
 				<p>We offer cash as a payment method</p>
 			</div>
@@ -115,6 +115,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		img {
+			width: 180px;
+		}
 
 		h3 {
 			margin-bottom: 0;
@@ -143,12 +147,13 @@
 				top: -1px;
 
 				padding: 10px 15px;
-				margin-right: -24px;
+				margin-right: 8px;
+				// margin-right: -24px;
 				background: transparent;
 				border: 2px solid white;
 				border-radius: 12px;
 
-				border-right: none;
+				// border-right: none;
 
 				font-size: larger;
 				color: white;

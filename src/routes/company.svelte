@@ -14,7 +14,7 @@
 		<div class="rotated">
 			<h1>{t('company.company')}</h1>
 		</div>
-		<img class="team-image" src="/images/team.png" alt="" />
+		<img class="team-image" src="/images/company.png" alt="" />
 	</div>
 </ContentSection>
 
@@ -64,12 +64,12 @@
 					<h4 class="gray">{t('company.team.andres_role')}</h4>
 				</div>
 				<div class="teammate">
-					<div class="circle" />
+					<img src="/images/hareth.png" />
 					<h2>Sharif Atassi</h2>
 					<h4 class="gray">{t('company.team.sharif_role')}</h4>
 				</div>
 				<div class="teammate">
-					<img src="/images/hareth.png" />
+					<div class="circle" />
 					<h2>Hareth Hmoud</h2>
 					<h4 class="gray">{t('company.team.hareth_role')}</h4>
 				</div>
@@ -106,11 +106,19 @@
 	}
 
 	.rotated {
-		transform: rotateZ(-90deg);
+		// transform: rotateZ(-90deg);
 	}
 
 	.section-header {
 		justify-content: space-between;
+
+		align-items: flex-end;
+
+		img {
+			width: 45%;
+			margin-top: 16px;
+			margin-bottom: 8px;
+		}
 	}
 
 	.team-image {
