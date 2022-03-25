@@ -1,18 +1,19 @@
 <script>
-	import Card from '$lib/components/common/Card.svelte';
 	import ContentSection from '$lib/components/common/ContentSection.svelte';
-	import SearchBar from '$lib/components/common/SearchBar.svelte';
 	import Spacer from '$lib/components/common/Spacer.svelte';
-	import Content from '$lib/components/layout/Content.svelte';
+	import { lang } from '$lib/stores/lang';
+	import { translate } from '$lib/translations';
 
 	function openLessons() {
 		location.href = '/learn/lessons/example';
 	}
+
+	$: t = translate($lang);
 </script>
 
 <ContentSection background="white" light={true}>
 	<div class="row">
-		<h1 style="margin: 0;">Learn</h1>
+		<h1 style="margin: 0;">{t('learn.title')}</h1>
 		<Spacer width={'32px'} />
 		<!-- <SearchBar expanded={true} /> -->
 	</div>

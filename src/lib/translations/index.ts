@@ -68,13 +68,23 @@ const translations = {
 				en: 'The first exchange to offer cash as a payment method to buy and sell crypto',
 				ar: 'أول منصة تسمح لشراء وبيع العملات الرقمية نقداً '
 			},
-			enter_email: {
-				en: 'Enter Email',
-				ar: 'أدخل بريدك'
+			phone_number: {
+				en: 'Phone Number',
+				ar: 'TODO'
 			},
 			start_investing: {
 				en: 'Start Investing',
 				ar: 'ابدا بالإستثمار'
+			},
+			join_beta: {
+				en: 'Join Beta',
+				ar: 'TODO'
+			}
+		},
+		platform: {
+			title: {
+				en: 'First platform to offer cash as a payment method to buy and sell Bitcoin and other cryptocurrencies',
+				ar: 'TODO'
 			}
 		},
 		courses: {
@@ -83,77 +93,76 @@ const translations = {
 				ar: 'دورات مجانية'
 			},
 			body: {
-				en: 'Learn about crypto and win rewards',
-				ar: 'تعرف على العملات الرقمية واربح بتكوين'
+				en: 'Win 100,000 USD in Bitcoin while learning about cryptocurrencies',
+				ar: 'TODO'
 			},
 			button: {
-				en: 'Learn and earn crypto',
-				ar: 'تعلم واربح عملات رقمية'
+				en: 'Start Learning',
+				ar: 'TODO'
 			}
 		},
-		lottery: {
-			title: {
-				en: 'Chance to win 100,000 USD in BTC after sign up',
-				ar: 'فرصة ربح 100,000 دولار أمريكي من البتكوين بعد التسجيل'
-			}
-		},
-		payment_methods: {
-			title: {
-				en: 'Pay with cash, credit/debit or PayPal',
-				ar: 'دفع نقدي أو باستخدام بطاقات أو باي بال'
-			}
-		},
-		locations: {
-			title: {
-				en: 'Free courses',
-				ar: 'دورات مجانية'
+		withdraw: {
+			text: {
+				en: 'and withdraw cash from Withdrawal Stands',
+				ar: 'TODO'
 			},
-			button: {
-				en: 'Learn and earn crypto',
-				ar: 'تعلم واربح عملات رقمية'
+			info: {
+				en: 'Cash Card Info',
+				ar: 'TODO'
+			},
+			stand_locations: {
+				en: 'Stand Locations',
+				ar: 'TODO'
 			}
 		},
 		cash_cards: {
 			title: {
-				en: 'How to buy and use Amam Cash Cards',
-				ar: 'كيفية شراء واستخدام بطاقة أمام المالية'
-			},
-			button: {
-				en: 'Amam Cash Cards',
-				ar: 'بطاقة أمام المالية'
-			}
-		},
-		forward: {
-			title: {
-				en: 'Forward... into the future',
-				ar: 'أمام... إلى المستقبل'
+				en: 'Buy and sell crypto using cash',
+				ar: 'TODO'
 			},
 			body: {
-				en: 'Tailored for the Middle East to build a better world for everyone',
-				ar: 'منصة مصممة للشرق الأوسط لخلق عالم أفضل للجميع'
-			},
-			button: {
-				en: 'Explore Regions',
-				ar: 'تعرف على المناطق'
+				en: 'Amam allows you to buy cryptocurrencies like Bitcoin and Ethereum using cash with Amam Cash Cards',
+				ar: 'TODO'
 			}
 		},
 		kickstart: {
 			title: {
-				en: 'Kickstart your future and plan for tomorrow',
-				ar: 'انطلق نحو المستقبل وابدا بالتخطيط لعالم الغد'
+				en: 'Kickstart your future with the simplest and safest way to buy and sell crypto',
+				ar: 'TODO'
 			},
-			begin_investing: {
-				en: 'Begin Investing',
-				ar: 'ابدا بالاستثمار'
+			secure: {
+				en: 'Secure',
+				ar: 'TODO'
 			},
-			download_app: {
-				en: 'Download App',
-				ar: 'حمل التطبيق'
+			secure_description: {
+				en: 'We store your funds safely',
+				ar: 'TODO'
+			},
+			simple: {
+				en: 'Simple',
+				ar: 'TODO'
+			},
+			simple_description: {
+				en: 'We offer 50+ cryptos to trade',
+				ar: 'TODO'
+			},
+			for_all: {
+				en: 'For All',
+				ar: 'TODO'
+			},
+			for_all_description: {
+				en: 'We offer cash as a payment method',
+				ar: 'TODO'
 			}
 		}
 	},
 	market: {},
-	learn: {},
+	learn: {
+		title: {
+			en: 'Learn',
+			ar: 'TODO'
+		}
+	},
 	company: {
 		company: {
 			en: 'Company',

@@ -3,18 +3,22 @@
 	import ContentSection from '$lib/components/common/ContentSection.svelte';
 	import SolidButton from '$lib/components/common/SolidButton.svelte';
 	import CoinPreviewCard from '$lib/components/splash/CoinPreviewCard.svelte';
+	import { lang } from '$lib/stores/lang';
+	import { translate } from '$lib/translations';
+
+	$: t = translate($lang);
 </script>
 
 <ContentSection background="var(--primary-color)">
 	<div class="section-welcome">
 		<div>
-			<h1>Our future starts here</h1>
+			<h1>{t('home.welcome.title')}</h1>
 
 			<div class="signup-input">
-				<input placeholder="Phone number" />
-				<SolidButton on:click={() => alert('coming soon')} invertColors={true}
-					>Join Beta</SolidButton
-				>
+				<input placeholder={t('home.welcome.phone_number')} />
+				<SolidButton on:click={() => alert('coming soon')} invertColors={true}>
+					{t('home.welcome.join_beta')}
+				</SolidButton>
 			</div>
 		</div>
 
@@ -24,10 +28,7 @@
 
 <ContentSection background="white" light={true}>
 	<div>
-		<h2>
-			First platform to offer cash as a payment method to buy and sell Bitcoin and other
-			cryptocurrencies
-		</h2>
+		<h2>{t('home.platform.title')}</h2>
 
 		<div class="grid-row">
 			<div class="coin-row row">
@@ -43,58 +44,55 @@
 <ContentSection light={true}>
 	<div class="section-courses">
 		<div>
-			<h1>Free courses</h1>
-			<h2>Win 100,000 USD in Bitcoin while learning about cryptocurrencies</h2>
+			<h1>{t('home.courses.title')}</h1>
+			<h2>{t('home.courses.body')}</h2>
 
-			<SolidButton>Start Learning</SolidButton>
+			<SolidButton>{t('home.courses.button')}</SolidButton>
 		</div>
 
-		<img src="/images/person.png" />
+		<img src="/images/classroom.png" />
 	</div>
 </ContentSection>
 
 <ContentSection background="white" light={true}>
 	<div class="section-card">
-		<h1>Buy and sell crypto using cash</h1>
-		<h2>
-			Amam allows you to buy cryptocurrencies like Bitcoin and Ethereum using cash with Amam Cash
-			Cards
-		</h2>
+		<h1>{t('home.cash_cards.title')}</h1>
+		<h2>{t('home.cash_cards.body')}</h2>
 
 		<img src="/images/card.png" />
 	</div>
 </ContentSection>
 
 <ContentSection background="var(--primary-color)">
-	<h2>and withdraw cash from Withdrawal Stands</h2>
+	<h2>{t('home.withdraw.text')}</h2>
 
 	<ButtonRow>
-		<SolidButton invertColors={true}>Cash Card Info</SolidButton>
-		<SolidButton invertColors={true}>Stand Locations</SolidButton>
+		<SolidButton invertColors={true}>{t('home.withdraw.info')}</SolidButton>
+		<SolidButton invertColors={true}>{t('home.withdraw.stand_locations')}</SolidButton>
 	</ButtonRow>
 </ContentSection>
 
 <ContentSection background="white" light={true}>
 	<div>
-		<h2>Kickstart your future with the simplest and safest way to buy and sell crypto</h2>
+		<h2>{t('home.kickstart.title')}</h2>
 
 		<div class="row">
 			<div class="feature-col">
 				<img src="/images/bitcoin_man.png" />
-				<h3>Secure</h3>
-				<p>We store your funds safely</p>
+				<h3>{t('home.kickstart.secure')}</h3>
+				<p>{t('home.kickstart.secure_description')}</p>
 			</div>
 
 			<div class="feature-col">
 				<img src="/images/vending.png" />
-				<h3>Simple</h3>
-				<p>We offer 50+ cryptos to trade</p>
+				<h3>{t('home.kickstart.simple')}</h3>
+				<p>{t('home.kickstart.simple_description')}</p>
 			</div>
 
 			<div class="feature-col">
 				<img src="/images/methods.png" />
-				<h3>For All</h3>
-				<p>We offer cash as a payment method</p>
+				<h3>{t('home.kickstart.for_all')}</h3>
+				<p>{t('home.kickstart.for_all_description')}</p>
 			</div>
 		</div>
 	</div>
