@@ -191,22 +191,42 @@ const translations = {
 				en: 'Co-Founder, Chief Executive Officer & President',
 				ar: 'شريك مؤسس والرئيس التنفيذي ورئيس الشركة'
 			},
+			zaid_name: {
+				en: 'Zaid Abdul-Hadi',
+				ar: 'زيد عبد الهادي'
+			},
 			andres_role: {
 				en: 'Co-Founder & Chief Technology Officer',
 				ar: 'شريك مؤسس ورئيس قسم التكنولوجيا'
+			},
+			andres_name: {
+				en: 'Andres Gutierrez',
+				ar: 'اندريس غوتيريز'
 			},
 			sharif_role: {
 				en: 'Vice President',
 				ar: 'نائب رئيس الشركة'
 			},
+			sharif_name: {
+				en: 'Sharif Atassi',
+				ar: 'شريف اتاسي'
+			},
 			hareth_role: {
 				en: 'Chief Operations Officer',
 				ar: 'رئيس قسم العمليات'
+			},
+			hareth_name: {
+				en: 'Hareth Hmoud',
+				ar: 'حارث حمود'
 			},
 			muhi_role: {
 				en: 'Chief of Marketing and Education',
 				ar: 'رئيس قسم التسويق والتعليم'
 			}
+			muhi_name: {
+				en: 'Muhieddeen Al Jawhary',
+				ar: 'محي الدين الجوهري'
+			},
 		},
 		blog: {
 			en: 'Blog',
