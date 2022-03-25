@@ -84,6 +84,11 @@
 	</div>
 </ContentSection>
 
+<ContentSection background="white">
+	<h1 style="color: var(--primary-color);">Blog & News</h1>
+	<h2 style="color: black">Coming soon</h2>
+</ContentSection>
+
 <style lang="scss">
 	.grid {
 		display: grid;

@@ -19,44 +19,62 @@
 
 	<div class="lessons-grid">
 		<div class="lesson-card" on:click={openLessons}>
-			<div>
+			<div class="content">
 				<h2>Easy Trading</h2>
 
-				<p>Learn how to buy and sell cryptocurrencies on our exchange.</p>
-				<p>If you're completely new to crypto, start here!</p>
+				<div class="row">
+					<div>
+						<p>Learn how to buy and sell cryptocurrencies on our exchange.</p>
+						<p>If you're completely new to crypto, start here!</p>
+					</div>
+
+					<img src="/images/trade.png" />
+				</div>
 			</div>
 		</div>
 
 		<div class="lesson-card" on:click={openLessons}>
-			<div>
+			<div class="content">
 				<h2>Understanding Blockchain</h2>
 
-				<p>
-					Learn how blockchain technology works under the hood, and how it can build different
-					applications more securely and efficiently.
-				</p>
+				<div class="row">
+					<p>
+						Learn how blockchain technology works under the hood, and how it can build different
+						applications more securely and efficiently.
+					</p>
+
+					<img src="/images/bitcoin_man.png" />
+				</div>
 			</div>
 		</div>
 
 		<div class="lesson-card" on:click={openLessons}>
-			<div>
+			<div class="content">
 				<h2>Evaluating Cryptocurrencies</h2>
 
-				<p>
-					Learn what to look for when evaluating a new cryptocurrency, and how major the
-					technologies differ.
-				</p>
+				<div class="row">
+					<p>
+						Learn what to look for when evaluating a new cryptocurrency, and how major the
+						technologies differ.
+					</p>
+
+					<img src="/images/vending.png" />
+				</div>
 			</div>
 		</div>
 
 		<div class="lesson-card" on:click={openLessons}>
-			<div>
+			<div class="content">
 				<h2>Trading with Indicators</h2>
 
-				<p>
-					Get an introduction to sophisticated trading, through technical indicators and tested
-					methods for combining them.
-				</p>
+				<div class="row">
+					<p>
+						Get an introduction to sophisticated trading, through technical indicators and tested
+						methods for combining them.
+					</p>
+
+					<img src="/images/graph.png" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -78,9 +96,14 @@
 
 			background: var(--primary-color);
 
-			div {
+			img {
+				width: 100px;
+				align-self: flex-end;
+			}
+
+			.content {
 				background: white;
-				height: calc(100% - 16px);
+				min-height: calc(100% - 16px);
 
 				padding: 8px 16px;
 			}
