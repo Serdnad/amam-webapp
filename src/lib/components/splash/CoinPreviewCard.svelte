@@ -21,7 +21,7 @@
 		border-radius: 10px;
 
 		max-height: 200px;
-		min-width: 220px;
+		min-width: 200px;
 
 		img {
 			position: absolute;

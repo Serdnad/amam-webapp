@@ -83,7 +83,7 @@ const translations = {
 		},
 		platform: {
 			title: {
-				en: 'First platform to offer cash as a payment method to buy and sell Bitcoin and other cryptocurrencies',
+				en: 'First platform to accept cash for Bitcoin and other cryptocurrencies',
 				ar: 'أول منصة تسمح لشراء وبيع بتكوين وعملات رقمية أخرى نقداً'
 			}
 		},
@@ -222,11 +222,11 @@ const translations = {
 			muhi_role: {
 				en: 'Chief of Marketing and Education',
 				ar: 'رئيس قسم التسويق والتعليم'
-			}
+			},
 			muhi_name: {
 				en: 'Muhieddeen Al Jawhary',
 				ar: 'محي الدين الجوهري'
-			},
+			}
 		},
 		blog: {
 			en: 'Blog',

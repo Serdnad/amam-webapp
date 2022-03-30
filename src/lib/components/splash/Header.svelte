@@ -16,13 +16,13 @@
 
 <header>
 	<div class="content">
-		<div class="mobile-only">
+		<div class="mobile-only row">
 			<NavDrawerButton />
 
 			<a href="/" target="_self">
 				<div class="row">
-					<img src="/icons/amam.png" />
-					<Spacer width="16px" />
+					<!-- <img src="/icons/amam.png" />
+					<Spacer width="16px" /> -->
 					<h2>{t('common.amam')}</h2>
 				</div>
 			</a>
@@ -56,6 +56,10 @@
 <style lang="scss">
 	header {
 		background: var(--primary-color);
+
+		@media screen and (min-width: 480px) {
+			position: sticky;
+		}
 	}
 
 	.content {

@@ -42,13 +42,13 @@
 
 	:global(.mobile-only) {
 		@media screen and (min-width: 480px) {
-			display: none;
+			display: none !important;
 		}
 	}
 
 	:global(.desktop-only) {
 		@media screen and (max-width: 479px) {
-			display: none;
+			display: none !important;
 		}
 	}
 
@@ -65,6 +65,12 @@
 
 	:global(.wrap) {
 		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	:global(.center) {
+		align-items: center;
+		justify-content: center;
 	}
 
 	.rtl {
@@ -78,6 +84,10 @@
 	:global(h1) {
 		font-size: 56px;
 		margin-top: 0;
+
+		@media (max-width: 560px) {
+			font-size: 44px;
+		}
 	}
 
 	:global(h2) {

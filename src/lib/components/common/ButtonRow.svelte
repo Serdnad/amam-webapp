@@ -21,5 +21,9 @@
 		display: flex;
 		flex-flow: row wrap;
 		gap: 32px;
+
+		@media screen and (max-width: 480px) {
+			justify-content: center;
+		}
 	}
 </style>

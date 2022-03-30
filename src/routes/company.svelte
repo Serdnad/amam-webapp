@@ -35,48 +35,38 @@
 				</div>
 			{/each}
 		</div>
-
-		<!-- <div class="country-grid">
-					{#each ['Jordan', 'Saudi Arabia', 'Syria', 'Lebanon', 'Egypt', 'Tunisia'] as country}
-						<div class="country-card">
-							<img src="/icons/countries/{country.toLowerCase().replace(' ', '_')}.png" alt="" />
-							<p>{t('common.countries.' + country.toLowerCase())}</p>
-						</div>
-					{/each}
-				</div> -->
 	</div>
 </ContentSection>
 
 <ContentSection>
 	<div class="section-team">
-		<h1>Team</h1>
+		<h1>{t('company.team.title')}</h1>
 		<div>
 			<grid class="team-grid">
 				<div class="teammate">
 					<img src="/images/zaid.jpeg" />
-					<!-- <div class="circle" /> -->
-					<h2>Zaid Abdul-Hadi</h2>
+					<h2>{t('company.team.zaid_name')}</h2>
 					<h4 class="gray">{t('company.team.zaid_role')}</h4>
 				</div>
 				<div class="teammate">
 					<div class="circle" />
-					<h2>Andres Gutierrez</h2>
+					<h2>{t('company.team.andres_name')}</h2>
 					<h4 class="gray">{t('company.team.andres_role')}</h4>
 				</div>
 				<div class="teammate">
 					<img src="/images/hareth.png" />
-					<h2>Sharif Atassi</h2>
+					<h2>{t('company.team.sharif_name')}</h2>
 					<h4 class="gray">{t('company.team.sharif_role')}</h4>
 				</div>
 				<div class="teammate">
 					<div class="circle" />
-					<h2>Hareth Hmoud</h2>
+					<h2>{t('company.team.hareth_name')}</h2>
 					<h4 class="gray">{t('company.team.hareth_role')}</h4>
 				</div>
 				<div class="teammate">
 					<img src="/images/muhi.png" />
 
-					<h2>Muhieddeen Al-Jawhary</h2>
+					<h2>{t('company.team.muhi_name')}</h2>
 					<h4 class="gray">{t('company.team.muhi_role')}</h4>
 				</div>
 			</grid>
@@ -116,13 +106,21 @@
 
 	.section-header {
 		justify-content: space-between;
-
 		align-items: flex-end;
 
 		img {
-			width: 45%;
+			max-width: 45%;
 			margin-top: 16px;
 			margin-bottom: 8px;
+		}
+
+		@media (max-width: 560px) {
+			flex-flow: row wrap;
+			justify-content: center;
+
+			img {
+				max-width: 100%;
+			}
 		}
 	}
 
@@ -244,6 +242,14 @@
 
 				margin: 0;
 			}
+
+			@media screen and (max-width: 480px) {
+				grid-column-end: span 12;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			justify-content: center;
 		}
 	}
 
