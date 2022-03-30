@@ -8,7 +8,7 @@
 
 <footer>
 	<div class="content">
-		<div class="g">
+		<div class="grid">
 			<a href="/" target="_self">
 				<div class="row spaced">
 					<img src="/icons/amam.png" />
@@ -16,7 +16,10 @@
 					<h2>{t('common.amam', $lang)}</h2>
 				</div>
 			</a>
-			<a href="/market" target="_self" class="header">{t('nav.Market', $lang)}</a>
+
+			<div class="mobile-only" />
+
+			<!-- <a href="/market" target="_self" class="header">{t('nav.Market', $lang)}</a> -->
 			<a href="/learn" target="_self" class="header">{t('nav.Learn', $lang)}</a>
 			<a href="/company" target="_self" class="header">{t('nav.Company', $lang)}</a>
 			<a href="/help" target="_self" class="header">Help</a>
@@ -32,22 +35,28 @@
 			</div>
 
 			<ul>
-				<li><a>About us</a></li>
-				<li><a>Blog</a></li>
-				<li><a>Employing</a></li>
+				<div class="desktop-only">
+					<li><a>About us</a></li>
+					<li><a>Blog</a></li>
+					<li><a>Employing</a></li>
+				</div>
 			</ul>
 
 			<ul>
-				<li><a>Cash Cards</a></li>
-				<li><a>Stands</a></li>
-				<li><a>Help Center</a></li>
+				<div class="desktop-only">
+					<li><a>Cash Cards</a></li>
+					<li><a>Stands</a></li>
+					<li><a>Help Center</a></li>
+				</div>
 			</ul>
 
 			<ul>
-				<li><a>User Agreement</a></li>
-				<li><a>Privacy Policy</a></li>
-				<li><a>AML & CML</a></li>
-				<li><a>Sharia Compliance</a></li>
+				<div class="desktop-only">
+					<li><a>User Agreement</a></li>
+					<li><a>Privacy Policy</a></li>
+					<li><a>AML & CML</a></li>
+					<li><a>Sharia Compliance</a></li>
+				</div>
 			</ul>
 		</div>
 	</div>
@@ -65,15 +74,19 @@
 		max-width: 1248px;
 		margin: auto;
 
-		padding: 32px;
+		// padding: 32px;
 		padding-top: 0;
 		box-sizing: border-box;
 	}
 
-	.g {
+	.grid {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		gap: 16px;
+
+		@media screen and (max-width: 480px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 
 		h2 {
 			margin: 0;
@@ -99,6 +112,10 @@
 			padding-right: 32px;
 
 			align-self: flex-end;
+
+			@media screen and (max-width: 480px) {
+				grid-column-end: span 2;
+			}
 		}
 
 		.license-text {

@@ -14,14 +14,14 @@
 	<div class="panel {$isDrawerOpen ? 'open' : ''}">
 		<div class="row">
 			<img src="/icons/amam.png" height="32px" />
-			<Spacer width="16px" />
-			<h2>{t('common.amam', $lang)}</h2>
+			<!-- <Spacer width="16px" />
+			<h2>{t('common.amam', $lang)}</h2> -->
 		</div>
 
 		<ul>
-			<li><a href="/market" target="_self">{t('nav.Market', $lang)}</a></li>
 			<li><a href="/learn" target="_self">{t('nav.Learn', $lang)}</a></li>
 			<li><a href="/company" target="_self">{t('nav.Company', $lang)}</a></li>
+			<li><a href="/help" target="_self">{t('nav.Help', $lang)}</a></li>
 		</ul>
 	</div>
 </div>
@@ -56,7 +56,7 @@
 		transition: 0.5s all;
 		width: 0;
 
-		background: #384250;
+		background: var(--primary-color);
 
 		&.open {
 			width: 70vw;

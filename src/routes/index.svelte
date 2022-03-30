@@ -32,7 +32,11 @@
 	<div>
 		<h2>{t('home.platform.title')}</h2>
 
-		<div class="coin-row row">
+		<div class="coin-row mobile-only">
+			<CoinPreviewCard />
+			<CoinPreviewCard />
+		</div>
+		<div class="coin-row desktop-only">
 			<CoinPreviewCard />
 			<CoinPreviewCard />
 			<CoinPreviewCard />
@@ -101,9 +105,10 @@
 </ContentSection>
 
 <style lang="scss">
-	.coin-row {
+	.coin-row,
+	.coin-row span {
 		display: flex;
-		flex-wrap: row wrap;
+		flex-flow: row wrap;
 		gap: 32px;
 	}
 
@@ -123,31 +128,36 @@
 		}
 
 		.signup-input {
+			display: flex;
 			input {
 				position: relative;
 				top: -1px;
 
 				padding: 10px 15px;
 				margin-right: 8px;
-				margin-bottom: 8px;
-				// margin-right: -24px;
+
 				background: transparent;
 				border: 2px solid white;
 				border-radius: 12px;
-
-				// border-right: none;
 
 				font-size: larger;
 				color: white;
 				&::placeholder {
 					color: white;
 				}
+			}
 
-				@media (max-width: 560px) {
-					// justify-self: center;
-					// margin: 8px;
-					// margin-left: 16px;
-					// padding-right: 8px;
+			@media screen and (max-width: 480px) {
+				flex-direction: column;
+				align-items: stretch;
+				// justify-content: cent;
+
+				input {
+					align-self: center;
+					width: calc(280px - 32px);
+
+					margin-right: 0;
+					margin-bottom: 8px;
 				}
 			}
 		}
@@ -158,15 +168,6 @@
 			img {
 				max-width: 100%;
 			}
-		}
-	}
-
-	.coin-row {
-		display: flex;
-		flex-flow: row wrap;
-
-		:nth-child(1) {
-			min-width: 200px;
 		}
 	}
 

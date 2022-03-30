@@ -78,7 +78,7 @@
 	}
 
 	main {
-		min-height: calc(100vh - 102px - 320px);
+		min-height: calc(100vh - 92px - 260px);
 	}
 
 	:global(h1) {
