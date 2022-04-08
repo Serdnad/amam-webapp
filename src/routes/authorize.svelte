@@ -17,7 +17,7 @@
 	});
 
 	async function attemptLogin() {
-		const authorizeUrl = await client.buildAuthorizeUrl({
+		authUrl = await client.buildAuthorizeUrl({
 			redirect_uri: window.location.origin
 		});
 
