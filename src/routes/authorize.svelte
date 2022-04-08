@@ -21,10 +21,10 @@
 	})
 
 	async function attemptLogin() {
-		client.loginWithPopup()
-		// authUrl = await client.buildAuthorizeUrl({
-		// 	// redirect_uri: window.location.origin
-		// });
+		// client.loginWithPopup()
+		authUrl = await client.buildAuthorizeUrl({
+			// redirect_uri: window.location.origin
+		})
 
 		console.log(authUrl)
 
