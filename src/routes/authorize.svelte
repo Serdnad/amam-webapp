@@ -21,7 +21,7 @@
 			redirect_uri: window.location.origin
 		});
 
-		console.log(authorizeUrl);
+		console.log(authUrl);
 	}
 </script>
 
