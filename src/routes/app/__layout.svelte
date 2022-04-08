@@ -1,4 +1,6 @@
-<script>
+<slot />
+
+<!-- <script>
 	import NavMenu from '$lib/components/layout/NavMenu.svelte';
 </script>
 
@@ -39,4 +41,4 @@
 
 		min-height: calc(100vh - 64px);
 	}
-</style>
+</style> -->
