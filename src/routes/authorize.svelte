@@ -8,7 +8,7 @@
 
 	onMount(async () => {
 		client = await createAuth0Client({
-			domain: 'dev-us6kkyfa.us.auth0.com',
+			domain: 'auth.amamcrypto.com',
 			client_id: 'DCwROhnovvs5P5rmRl6B1asjtRdxcRtY'
 		});
 
