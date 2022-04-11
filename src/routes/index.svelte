@@ -136,6 +136,7 @@
 	.section-team {
 		h1 {
 			color: var(--primary-color);
+			margin-bottom: 16px;
 		}
 
 		.team-grid {

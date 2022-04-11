@@ -184,7 +184,7 @@ const translations = {
 		},
 		team: {
 			title: {
-				en: 'Team',
+				en: 'Our Team',
 				ar: 'قادتنا',
 			},
 			zaid_role: {
