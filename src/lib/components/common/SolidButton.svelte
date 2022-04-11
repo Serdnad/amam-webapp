@@ -51,6 +51,6 @@
 
 	:global(.expanded-button) {
 		// min-width: 180px;
-		width: min(100%, 280px);
+		width: min(100%, 340px);
 	}
 </style>

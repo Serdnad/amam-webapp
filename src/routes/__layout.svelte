@@ -87,8 +87,9 @@
 	}
 
 	:global(h1) {
-		font-size: 56px;
+		font-size: 72px;
 		margin-top: 0;
+		margin-bottom: 8px;
 
 		@media (max-width: 560px) {
 			font-size: 44px;

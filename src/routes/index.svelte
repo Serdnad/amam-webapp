@@ -107,7 +107,7 @@
 			display: flex;
 			flex-direction: column;
 
-			gap: 32px;
+			// gap: 16px;
 		}
 
 		.signup-input {
@@ -119,8 +119,8 @@
 				font-size: larger;
 				background: var(--gray);
 
-				margin-bottom: 16px;
-				width: calc(280px - 24px);
+				margin-bottom: 32px;
+				width: calc(340px - 24px);
 
 				&:focus,
 				&:active {
