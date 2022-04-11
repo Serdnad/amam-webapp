@@ -1,255 +1,219 @@
 <script>
-	import ButtonRow from '$lib/components/common/ButtonRow.svelte';
-	import ContentSection from '$lib/components/common/ContentSection.svelte';
-	import SolidButton from '$lib/components/common/SolidButton.svelte';
-	import CoinPreviewCard from '$lib/components/splash/CoinPreviewCard.svelte';
-	import { lang } from '$lib/stores/lang';
-	import { translate } from '$lib/translations';
+	import ButtonRow from '$lib/components/common/ButtonRow.svelte'
+	import ContentSection from '$lib/components/common/ContentSection.svelte'
+	import SolidButton from '$lib/components/common/SolidButton.svelte'
+	import { lang } from '$lib/stores/lang'
+	import { translate } from '$lib/translations'
 
-	$: t = translate($lang);
+	$: t = translate($lang)
+
+	async function joinBeta() {
+		// TODO
+		alert('thanks for joining!')
+	}
 </script>
 
-<ContentSection background="var(--primary-color)">
+<ContentSection background="var(--off-white)">
 	<div class="section-welcome">
-		<div>
-			<h1>{t('home.welcome.title')}</h1>
+		<h1 style="color: var(--primary-color);">{t('home.welcome.title')}</h1>
+		<div class="row">
+			<div class="left">
+				<h2>First exchange to offer new ways to buy and sell crypto in the Middle East</h2>
 
-			<div class="signup-input">
-				<input placeholder={t('home.welcome.phone_number')} />
-				<ButtonRow>
-					<SolidButton on:click={() => alert('coming soon')} invertColors={true}>
-						{t('home.welcome.join_beta')}
-					</SolidButton>
-				</ButtonRow>
+				<div class="signup-input">
+					<input placeholder={t('home.welcome.phone_number')} />
+					<ButtonRow>
+						<SolidButton on:click={() => alert('coming soon')}>
+							{t('home.welcome.join_beta')}
+						</SolidButton>
+					</ButtonRow>
+				</div>
 			</div>
+
+			<img src="/images/app.png" />
 		</div>
-
-		<img src="/images/app.png" />
-	</div>
-</ContentSection>
-
-<ContentSection background="white" light={true}>
-	<div>
-		<h2>{t('home.platform.title')}</h2>
-
-		<div class="coin-row mobile-only">
-			<CoinPreviewCard />
-			<CoinPreviewCard />
-		</div>
-		<div class="coin-row desktop-only">
-			<CoinPreviewCard />
-			<CoinPreviewCard />
-			<CoinPreviewCard />
-			<CoinPreviewCard />
-		</div>
-	</div>
-</ContentSection>
-
-<ContentSection light={true}>
-	<div class="section-courses">
-		<div>
-			<h1>{t('home.courses.title')}</h1>
-			<h2>{t('home.courses.body')}</h2>
-
-			<ButtonRow>
-				<SolidButton>{t('home.courses.button')}</SolidButton>
-			</ButtonRow>
-		</div>
-
-		<img src="/images/classroom.png" />
-	</div>
-</ContentSection>
-
-<ContentSection background="white" light={true}>
-	<div class="section-card">
-		<h1>{t('home.cash_cards.title')}</h1>
-		<h2>{t('home.cash_cards.body')}</h2>
-
-		<img src="/images/card.png" />
 	</div>
 </ContentSection>
 
 <ContentSection background="var(--primary-color)">
-	<h2>{t('home.withdraw.text')}</h2>
+	<div class="section-mission">
+		<h1>Our Mission</h1>
 
-	<ButtonRow>
-		<SolidButton invertColors={true}>{t('home.withdraw.info')}</SolidButton>
-		<SolidButton invertColors={true}>{t('home.withdraw.stand_locations')}</SolidButton>
-	</ButtonRow>
+		<p>
+			Amam’s mission is to build the foundation of tomorrow’s world by providing the Middle East
+			with a cryptocurrency exchange platform tailored just for them.
+		</p>
+	</div>
 </ContentSection>
 
-<ContentSection background="white" light={true}>
-	<div>
-		<h2>{t('home.kickstart.title')}</h2>
+<ContentSection>
+	<div class="section-team">
+		<h1>{t('company.team.title')}</h1>
+		<div>
+			<grid class="team-grid">
+				<div class="teammate">
+					<img src="/images/zaid.jpeg" />
+					<h2>{t('company.team.zaid_name')}</h2>
+					<h4 class="gray">{t('company.team.zaid_role')}</h4>
+				</div>
+				<div class="teammate">
+					<img src="/images/andres.jpeg" />
+					<h2>{t('company.team.andres_name')}</h2>
+					<h4 class="gray">{t('company.team.andres_role')}</h4>
+				</div>
+				<div class="teammate">
+					<img src="/images/sharif.jpeg" />
+					<h2>{t('company.team.sharif_name')}</h2>
+					<h4 class="gray">{t('company.team.sharif_role')}</h4>
+				</div>
+				<div class="teammate">
+					<img src="/images/hareth.jpeg" />
+					<h2>{t('company.team.hareth_name')}</h2>
+					<h4 class="gray">{t('company.team.hareth_role')}</h4>
+				</div>
+				<div class="teammate">
+					<img src="/images/muhi.jpeg" />
 
-		<div class="row wrap features">
-			<div class="feature-col">
-				<img src="/images/bitcoin_man.png" />
-				<h3>{t('home.kickstart.secure')}</h3>
-				<p>{t('home.kickstart.secure_description')}</p>
-			</div>
-
-			<div class="feature-col">
-				<img src="/images/vending.png" />
-				<h3>{t('home.kickstart.simple')}</h3>
-				<p>{t('home.kickstart.simple_description')}</p>
-			</div>
-
-			<div class="feature-col">
-				<img src="/images/methods.png" />
-				<h3>{t('home.kickstart.for_all')}</h3>
-				<p>{t('home.kickstart.for_all_description')}</p>
-			</div>
+					<h2>{t('company.team.muhi_name')}</h2>
+					<h4 class="gray">{t('company.team.muhi_role')}</h4>
+				</div>
+			</grid>
 		</div>
 	</div>
 </ContentSection>
 
 <style lang="scss">
-	.coin-row,
-	.coin-row span {
-		display: flex;
-		flex-flow: row wrap;
-		gap: 32px;
-	}
-
-	.row {
-		// justify-content: space-between;
-	}
-
 	.section-welcome {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		gap: 32px;
+		margin-bottom: -32px;
 
-		img {
-			max-width: 40%;
-			margin-bottom: -32px;
+		h2 {
+			color: black;
+		}
+
+		.row {
+			display: flex;
+			align-items: flex-start;
+			gap: 32px;
+		}
+
+		.left {
+			display: flex;
+			flex-direction: column;
+
+			gap: 32px;
 		}
 
 		.signup-input {
-			display: flex;
 			input {
-				position: relative;
-				top: -1px;
+				border: none;
+				border-radius: 10px;
 
-				padding: 10px 15px;
-				margin-right: 8px;
+				padding: 16px;
+				background: var(--gray);
 
-				background: transparent;
-				border: 2px solid white;
+				margin-bottom: 16px;
+			}
+		}
+
+		img {
+			width: 50%;
+		}
+	}
+
+	.section-mission {
+		h1 {
+			margin: 0;
+		}
+		p {
+			font-size: x-large;
+			margin: 0;
+		}
+	}
+
+	img {
+	}
+
+	.section-team {
+		h1 {
+			color: var(--primary-color);
+		}
+
+		.team-grid {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			gap: 32px;
+
+			.teammate {
+				grid-column-end: span 4;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
 				border-radius: 12px;
+				overflow: hidden;
 
-				font-size: larger;
-				color: white;
-				&::placeholder {
-					color: white;
+				background: white; // overflow: hidden;
+				box-shadow: 0 0 3px 1.5px #cccccc55;
+				// align-items: center;
+				.circle {
+					background: #1a8af0;
+
+					min-width: 240px;
+					max-width: 320px;
+
+					min-height: 280px;
+					max-height: 280px;
+					aspect-ratio: 1;
+
+					border-radius: 50%;
+				}
+
+				img {
+					width: 100%;
+					// min-width: 240px;
+					// max-width: 320px;
+
+					// min-height: 240px;
+					// max-height: 280px;
+					// aspect-ratio: 1;
+
+					// border-radius: 50%;
+				}
+
+				h2 {
+					margin-top: 16px;
+					margin-bottom: 0;
+
+					font-size: x-large;
+
+					color: black;
+
+					padding: 0 16px;
+				}
+
+				h4 {
+					font-size: 24px;
+					font-weight: 400;
+					text-align: center;
+
+					font-size: larger;
+
+					margin: 0;
+
+					padding: 0 16px 16px 16px;
+					line-height: 1.4;
+
+					color: #555555;
+				}
+
+				@media screen and (max-width: 480px) {
+					grid-column-end: span 12;
 				}
 			}
 
 			@media screen and (max-width: 480px) {
-				flex-direction: column;
-				align-items: stretch;
-				// justify-content: cent;
-
-				input {
-					align-self: center;
-					width: calc(280px - 32px);
-
-					margin-right: 0;
-					margin-bottom: 8px;
-				}
+				justify-content: center;
 			}
-		}
-
-		@media (max-width: 560px) {
-			flex-flow: row wrap;
-
-			img {
-				max-width: 100%;
-			}
-		}
-	}
-
-	.section-courses {
-		display: flex;
-		justify-content: space-between;
-		gap: 32px;
-
-		h1 {
-			color: var(--primary-color);
-			margin-bottom: 0;
-		}
-
-		img {
-			max-width: 40%;
-			margin-bottom: -32px;
-		}
-
-		@media (max-width: 560px) {
-			flex-flow: row wrap;
-
-			img {
-				max-width: 100%;
-			}
-		}
-	}
-
-	.section-card {
-		display: flex;
-		flex-direction: column;
-
-		h1 {
-			margin-bottom: 0;
-		}
-
-		h2 {
-			font-weight: 400;
-			color: var(--primary-color);
-		}
-
-		img {
-			max-width: 60%;
-			margin-bottom: -32px;
-
-			align-self: center;
-		}
-
-		@media (max-width: 560px) {
-			flex-flow: row wrap;
-
-			img {
-				max-width: 100%;
-			}
-		}
-	}
-
-	.features {
-		justify-content: space-between;
-
-		.feature-col {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-
-			img {
-				width: 180px;
-			}
-
-			h3 {
-				margin-bottom: 0;
-				font-size: xx-large;
-				margin-top: 16px;
-			}
-			p {
-				margin: 0;
-				font-size: larger;
-			}
-		}
-
-		@media (max-width: 560px) {
-			justify-content: center;
 		}
 	}
 </style>

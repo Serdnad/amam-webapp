@@ -1,16 +1,16 @@
 <script>
-	import { lang } from '$lib/stores/lang';
-	import { translate } from '$lib/translations';
-	import { setPreference } from '$lib/utils/preferences';
-	import SolidButton from '../common/SolidButton.svelte';
-	import Spacer from '../common/Spacer.svelte';
-	import NavDrawerButton from '../layout/NavDrawerButton.svelte';
+	import { lang } from '$lib/stores/lang'
+	import { translate } from '$lib/translations'
+	import { setPreference } from '$lib/utils/preferences'
+	import SolidButton from '../common/SolidButton.svelte'
+	import Spacer from '../common/Spacer.svelte'
+	import NavDrawerButton from '../layout/NavDrawerButton.svelte'
 
-	$: t = translate($lang);
+	$: t = translate($lang)
 
 	function toggleLanguage() {
-		$lang = $lang == 'en' ? 'ar' : 'en';
-		setPreference('lang', $lang);
+		$lang = $lang == 'en' ? 'ar' : 'en'
+		setPreference('lang', $lang)
 	}
 </script>
 
@@ -39,23 +39,28 @@
 				</a>
 
 				<!-- <a href="/market" target="_self">{t('nav.Market')}</a> -->
-				<a href="/learn" target="_self">{t('nav.Learn')}</a>
-				<a href="/company" target="_self">{t('nav.Company')}</a>
-				<a href="/help" target="_self">{t('nav.Help')}</a>
+				<!-- <a href="/learn" target="_self">{t('nav.Learn')}</a> -->
+				<!-- <a href="/company" target="_self">{t('nav.Company')}</a> -->
+				<!-- <a href="/help" target="_self">{t('nav.Help')}</a> -->
 			</div>
 		</div>
 
 		<div class="expanded" />
 
 		<div style="direction: ltr;">
-			<SolidButton on:click={toggleLanguage} textOnly={true}>Lang اللغة</SolidButton>
+			<SolidButton on:click={toggleLanguage} textOnly={true} textColor="var(--primary-color)"
+				>{false ? 'Lang' : 'اللغة'}</SolidButton
+			>
 		</div>
 	</div>
 </header>
 
 <style lang="scss">
+	* {
+		color: var(--primary-color);
+	}
 	header {
-		background: var(--primary-color);
+		// background: var(--primary-color);
 
 		@media screen and (min-width: 480px) {
 			position: sticky;
@@ -79,10 +84,11 @@
 
 	.expanded-links {
 		display: flex;
-		flex: 3;
+		gap: 64px;
+		// flex: 3;
 		// width: 100%;
-		align-items: center;
-		justify-content: space-between;
+		// align-items: center;
+		// justify-content: space-between;
 	}
 
 	.row {
@@ -102,7 +108,7 @@
 	}
 
 	.links {
-		justify-content: space-between;
+		// justify-content: space-between;
 	}
 
 	.row {

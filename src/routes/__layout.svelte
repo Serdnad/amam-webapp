@@ -1,6 +1,7 @@
 <script lang="ts">
 	import NavDrawer from '$lib/components/layout/NavDrawer.svelte'
 	import Footer from '$lib/components/splash/Footer.svelte'
+	import SimpleFooter from '$lib/components/splash/SimpleFooter.svelte'
 	import Header from '$lib/components/splash/Header.svelte'
 
 	import { lang } from '$lib/stores/lang'
@@ -22,7 +23,8 @@
 	<main>
 		<slot />
 	</main>
-	<Footer />
+	<!-- <Footer /> -->
+	<SimpleFooter />
 </div>
 
 <style lang="scss">

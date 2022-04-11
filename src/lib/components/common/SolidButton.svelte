@@ -1,10 +1,13 @@
 <script lang="ts">
-	export let invertColors = false;
-	export let textOnly = false;
+	export let invertColors = false
+	export let textOnly = false
+	export let textColor = 'white'
 </script>
 
-<button on:click class="{invertColors ? 'inverted' : ''} {textOnly ? 'text-only' : ''}"
-	><slot /></button
+<button
+	on:click
+	class="{invertColors ? 'inverted' : ''} {textOnly ? 'text-only' : ''}"
+	style={`color: ${textColor}`}><slot /></button
 >
 
 <style lang="scss">
