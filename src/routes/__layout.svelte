@@ -1,15 +1,15 @@
 <script lang="ts">
-	import NavDrawer from '$lib/components/layout/NavDrawer.svelte';
-	import Footer from '$lib/components/splash/Footer.svelte';
-	import Header from '$lib/components/splash/Header.svelte';
+	import NavDrawer from '$lib/components/layout/NavDrawer.svelte'
+	import Footer from '$lib/components/splash/Footer.svelte'
+	import Header from '$lib/components/splash/Header.svelte'
 
-	import { lang } from '$lib/stores/lang';
-	import { getPreference } from '$lib/utils/preferences';
-	import { onMount } from 'svelte';
+	import { lang } from '$lib/stores/lang'
+	import { getPreference } from '$lib/utils/preferences'
+	import { onMount } from 'svelte'
 
 	onMount(() => {
-		$lang = getPreference('lang');
-	});
+		$lang = getPreference('lang')
+	})
 </script>
 
 <svelte:head>
@@ -27,7 +27,9 @@
 
 <style lang="scss">
 	:root {
-		--primary-color: #1a89ec;
+		--primary-color: #198bf0;
+		--off-white: #f2f2f2;
+		--gray: #bfbfbf;
 	}
 
 	:global(*) {

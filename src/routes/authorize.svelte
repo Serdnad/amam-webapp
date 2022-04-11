@@ -15,21 +15,26 @@
 		})
 
 		console.log(client)
+		// const user = await client.getUser()
+		// console.log('user', user)
+
+		// console.log(await client.getTokenSilently())
+
 		isAuthenticated = await client.isAuthenticated()
 
 		console.log(isAuthenticated)
-	})
 
-	async function attemptLogin() {
-		// client.loginWithPopup()
-		authUrl = await client.buildAuthorizeUrl({
-			// redirect_uri: window.location.origin
+		// if (!isAuthenticated) {
+		// 	authUrl = await client.buildAuthorizeUrl()
+		// }
+
+		await client.loginWithRedirect({
+			redirect_uri: 'http://localhost:3000/',
 		})
-
-		console.log(authUrl)
-
-		// client.
-	}
+		//logged in. you can get the user profile like this:
+		const user = await client.getUser()
+		console.log(user)
+	})
 
 	async function getToken() {
 		return await client.getTokenSilently()
@@ -41,11 +46,9 @@
 	}
 </script>
 
-<button on:click={attemptLogin}>LOG IN</button>
-
 {#if authUrl}
 	<iframe src={authUrl} />
-{/if}
+{/if} 
 
 {#if isAuthenticated}
 	<h1>Yo're sgned in!</h1>
@@ -57,5 +60,6 @@
 	iframe {
 		border: none;
 		width: 100%;
+		height: 100vh;
 	}
 </style>
