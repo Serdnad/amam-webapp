@@ -32,7 +32,7 @@
 			<div class="row expanded2 links">
 				<a href="/" target="_self">
 					<div class="row">
-						<img src="/icons/amam.png" />
+						<img src="/icons/amam.svg" />
 						<Spacer width="16px" />
 						<h2>{t('common.amam')}</h2>
 					</div>
@@ -60,7 +60,7 @@
 		color: var(--primary-color);
 	}
 	header {
-		// background: var(--primary-color);
+		background: var(--off-white);
 
 		@media screen and (min-width: 480px) {
 			position: sticky;
@@ -117,7 +117,7 @@
 	}
 
 	img {
-		height: 24px;
+		height: 36px;
 	}
 
 	a {
