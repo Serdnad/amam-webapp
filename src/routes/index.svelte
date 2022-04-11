@@ -39,16 +39,14 @@
 	<div class="section-mission">
 		<h2>Our Mission</h2>
 
-		<p style="color: var(--primary-color);">We’re building the foundation of tomorrow’s world.</p>
-		<br />
-		<p>
-			Amam aims to reshape the Middle East and North Africa, and propel the region into the future
-			by building a cryptocurrency exchange platform tailored just for you.
+		<p style="color: var(--primary-color);">
+			To build the foundation of tomorrow’s world by providing the Middle East with a cryptocurrency
+			exchange platform tailored just for them.
 		</p>
 		<br />
 		<p>
-			We offer new ways to buy and sell Bitcoin and other cryptocurrencies, alongside educational
-			lessons about the technology and its applications.
+			Amam (أمام) is a centralized cryptocurrency exchange platform tailored for the Middle East and
+			North Africa. We offer new ways to buy and sell Bitcoin and other cryptocurrencies.
 		</p>
 	</div>
 </ContentSection>
