@@ -31,7 +31,7 @@
 		max-width: 1080px;
 		margin: auto;
 
-		padding: 8px 0;
+		padding: 8px 16px;
 	}
 
 	.socials {

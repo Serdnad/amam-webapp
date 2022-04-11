@@ -99,6 +99,10 @@
 			display: flex;
 			align-items: flex-start;
 			gap: 32px;
+
+			@media screen and (max-width: 480px) {
+				flex-direction: column;
+			}
 		}
 
 		.left {
@@ -129,6 +133,10 @@
 
 		img {
 			width: 40%;
+
+			@media screen and (max-width: 480px) {
+				width: 100%;
+			}
 		}
 	}
 

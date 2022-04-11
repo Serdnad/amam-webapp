@@ -17,12 +17,13 @@
 <header>
 	<div class="content">
 		<div class="mobile-only row">
-			<NavDrawerButton />
+			<!-- <NavDrawerButton /> -->
 
 			<a href="/" target="_self">
 				<div class="row">
 					<!-- <img src="/icons/amam.png" />
 					<Spacer width="16px" /> -->
+					<img src="/icons/amam.svg" />
 					<h2>{t('common.amam')}</h2>
 				</div>
 			</a>
@@ -117,7 +118,8 @@
 	}
 
 	img {
-		height: 36px;
+		height: 52px;
+		margin-top: 3px;
 	}
 
 	a {
