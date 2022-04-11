@@ -117,7 +117,7 @@
 				border: none;
 				border-radius: 10px;
 
-				padding: 12px 12px;
+				padding: 18px 12px;
 				font-size: larger;
 				background: var(--gray);
 
@@ -150,6 +150,7 @@
 		p {
 			font-size: x-large;
 			margin: 0;
+			line-height: 1.8;
 
 			color: black;
 		}

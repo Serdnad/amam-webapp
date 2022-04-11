@@ -37,7 +37,7 @@
 
 	:global(*) {
 		color: white;
-		font-family: Changa, Cereal, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+		font-family: Cereal, Montserrat, Verdana, Geneva, Tahoma, sans-serif;
 	}
 
 	:global(body) {
@@ -80,6 +80,9 @@
 
 	.rtl {
 		direction: rtl;
+		:global(*) {
+			font-family: Cairo, Changa, Arial, Helvetica, sans-serif;
+		}
 	}
 
 	main {
