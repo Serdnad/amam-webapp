@@ -31,6 +31,7 @@
 	:root {
 		--primary-color: #198bf0;
 		--off-white: #f2f2f2;
+		--light-gray: #e2e2e2;
 		--gray: #bfbfbf;
 	}
 
@@ -95,13 +96,15 @@
 	}
 
 	:global(h2) {
-		font-size: 30px;
+		font-size: 42px;
 		line-height: 2;
 		margin-top: 0;
 	}
 
 	:global(h3) {
 		line-height: 2;
+		font-size: 30px;
+		margin-top: 0;
 	}
 
 	:global(.gray) {

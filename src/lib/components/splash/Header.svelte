@@ -49,7 +49,7 @@
 
 		<div style="direction: ltr;">
 			<SolidButton on:click={toggleLanguage} textOnly={true} textColor="var(--primary-color)"
-				>{false ? 'Lang' : 'اللغة'}</SolidButton
+				>{false ? 'Lang' : 'العربية'}</SolidButton
 			>
 		</div>
 	</div>
@@ -60,7 +60,7 @@
 		color: var(--primary-color);
 	}
 	header {
-		background: var(--off-white);
+		background: var(--light-gray);
 
 		@media screen and (min-width: 480px) {
 			position: sticky;
@@ -68,13 +68,13 @@
 	}
 
 	.content {
-		max-width: 1248px;
+		max-width: 1080px;
 		margin: auto;
 
 		display: flex;
 		align-items: center;
 
-		padding: 0 32px;
+		// padding: 0 32px;
 		box-sizing: border-box;
 
 		@media screen and (max-width: 480px) {

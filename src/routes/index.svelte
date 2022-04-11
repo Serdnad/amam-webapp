@@ -13,12 +13,12 @@
 	}
 </script>
 
-<ContentSection background="var(--off-white)">
+<ContentSection background="var(--light-gray)">
 	<div class="section-welcome">
 		<h1 style="color: var(--primary-color);">{t('home.welcome.title')}</h1>
 		<div class="row">
 			<div class="left">
-				<h2>First exchange to offer new ways to buy and sell crypto in the Middle East</h2>
+				<h3>First exchange to offer new ways to buy and sell crypto in the Middle East</h3>
 
 				<div class="signup-input">
 					<input placeholder={t('home.welcome.phone_number')} />
@@ -35,20 +35,27 @@
 	</div>
 </ContentSection>
 
-<ContentSection background="var(--primary-color)">
+<ContentSection background="var(--off-white)">
 	<div class="section-mission">
-		<h1>Our Mission</h1>
+		<h2>Our Mission</h2>
 
+		<p style="color: var(--primary-color);">We’re building the foundation of tomorrow’s world.</p>
+		<br />
 		<p>
-			Amam’s mission is to build the foundation of tomorrow’s world by providing the Middle East
-			with a cryptocurrency exchange platform tailored just for them.
+			Amam aims to reshape the Middle East and North Africa, and propel the region into the future
+			by building a cryptocurrency exchange platform tailored just for you.
+		</p>
+		<br />
+		<p>
+			We offer new ways to buy and sell Bitcoin and other cryptocurrencies, alongside educational
+			lessons about the technology and its applications.
 		</p>
 	</div>
 </ContentSection>
 
 <ContentSection>
 	<div class="section-team">
-		<h1>{t('company.team.title')}</h1>
+		<h2>{t('company.team.title')}</h2>
 		<div>
 			<grid class="team-grid">
 				<div class="teammate">
@@ -86,7 +93,7 @@
 	.section-welcome {
 		margin-bottom: -32px;
 
-		h2 {
+		h3 {
 			color: black;
 		}
 
@@ -116,27 +123,27 @@
 		}
 
 		img {
-			width: 50%;
+			width: 40%;
 		}
 	}
 
 	.section-mission {
-		h1 {
+		h2 {
 			margin: 0;
+			color: var(--primary-color);
 		}
 		p {
 			font-size: x-large;
 			margin: 0;
+
+			color: black;
 		}
 	}
 
-	img {
-	}
-
 	.section-team {
-		h1 {
+		h2 {
 			color: var(--primary-color);
-			margin-bottom: 16px;
+			margin-bottom: 24px;
 		}
 
 		.team-grid {
