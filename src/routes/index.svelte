@@ -21,8 +21,8 @@
 				<h3>First exchange to offer new ways to buy and sell crypto in the Middle East</h3>
 
 				<div class="signup-input">
-					<input placeholder={t('home.welcome.phone_number')} />
 					<ButtonRow>
+						<input placeholder={t('home.welcome.phone_number')} />
 						<SolidButton on:click={joinBeta}>
 							{t('home.welcome.join_beta')}
 						</SolidButton>
@@ -121,8 +121,10 @@
 				font-size: larger;
 				background: var(--gray);
 
-				margin-bottom: 32px;
-				width: calc(340px - 24px);
+				// margin-bottom: 32px;
+				width: min(100%, calc(340px - 24px));
+				align-self: center;
+				justify-self: center;
 
 				&:focus,
 				&:active {
