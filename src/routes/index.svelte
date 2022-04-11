@@ -9,7 +9,7 @@
 
 	async function joinBeta() {
 		// TODO
-		alert('thanks for joining!')
+		alert('coming soon!')
 	}
 </script>
 
@@ -23,7 +23,7 @@
 				<div class="signup-input">
 					<input placeholder={t('home.welcome.phone_number')} />
 					<ButtonRow>
-						<SolidButton on:click={() => alert('coming soon')}>
+						<SolidButton on:click={joinBeta}>
 							{t('home.welcome.join_beta')}
 						</SolidButton>
 					</ButtonRow>
@@ -115,10 +115,17 @@
 				border: none;
 				border-radius: 10px;
 
-				padding: 16px;
+				padding: 12px 12px;
+				font-size: larger;
 				background: var(--gray);
 
 				margin-bottom: 16px;
+				width: calc(280px - 24px);
+
+				&:focus,
+				&:active {
+					outline: 3px solid var(--primary-color);
+				}
 			}
 		}
 
